@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bridge Ip2</title>
+        <link rel="stylesheet" href="./resources/styles/style.css">
+        <script src="./resources/scripts/script.js" defer></script>
+
+        <!-- Ioniconic -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+        <!-- Slick Js-->
+        <!-- <script src="./resources/scripts/slick.min.js"></script> -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <link rel="stylesheet" href="./resources/styles/slick.css">
+        <link rel="stylesheet" href="./resources/styles/slick-theme.css">
+
+        <!-- Swiper JS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
+</head>
+<body>
+        <section class="head-section">
+                <header id="header">
+                        <!-- <div class="user-acc">
+                                <div class="search-bar">
+                                        <button id="search-btn">
+                                                <ion-icon name="search-outline"></ion-icon>
+                                        </button>
+                                        <input id="search" type="text" placeholder="Search">
+                                </div>
+                                <div class="login-btn">
+                                        <a href="#">
+                                                <ion-icon name="lock-closed-outline"></ion-icon>
+                                                <button>
+                                                        Login
+                                                </button>
+                                        </a>
+                                </div>
+                        </div> -->
+                        <div class="navbar">
+                            <div class="logo">
+                                <a href="./index.html"><img src="./resources/img/logo.png" alt=""></a>
+                                <img class="govt" src="./resources/img/govt.png" alt="">
+                            </div>
+                            <div id="menu" class="menu">
+                                <ion-icon id="menu-icon" name="menu"></ion-icon>
+                            </div>
+                            <nav id="nav">  
+                                <ul>
+                                    <li id="product-parent">
+                                            <a   id="products" href="#" class="nav-item" >
+                                                Products<ion-icon onclick="productMenu" name="arrow-down-circle-outline"></ion-icon>
+                                        </a>
+                                                <div id="product-items" class="nav-items">
+                                                        <div class="items-content">
+                                                                <div id="heading" class="heading">
+                                                                        <h3>Bridge I2P</h3>
+                                                                        <p>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        </p>
+                                                                </div>
+                                                                <div id="links" class="links">
+                                                                        <div class="link">
+                                                                                <img src="./resources/img/Products Icons/icons_Business Phone System.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./pages/products.html">Business Phone System</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="./resources/img/Products Icons/icons_Contact Center.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./pages/contact.html">Contact Centre</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="./resources/img/Products Icons/icons_IVR broadcasting.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./pages/IVRBroadcast.html">IVR Broadcasting</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div id="company-content" class="company-content">
+                                                                <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                                </p>
+                                                                <img src="./resources/img/logo.png" alt="">
+                                                        </div>
+                                                </div>
+                                        </li>
+                                    <li id="solution-parent">
+                                            <a id="solutions" href="#">
+                                                    Solutions<ion-icon id="solution-icon" name="arrow-down-circle-outline"></ion-icon>
+                                            </a>
+                                            <div id="solution-items" class="nav-items">
+                                                <div id="items-content" class="items-content">
+                                                        <div class="heading">
+                                                                <h3>Bridge I2P</h3>
+                                                                <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                </p>
+                                                        </div>
+                                                        <div class="links">
+                                                                <div class="link">
+                                                                        <img src="./resources/img/Solutions/icons/Icons_Professional services.svg" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/professional-services.html">Professional Services</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="./resources/img/Solutions/icons/Icons_Call Center.svg" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/call-center.html">Call Center</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="./resources/img/Solutions/icons/Icons_health.svg" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/health.html">Health</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="./resources/img/Solutions/icons/Icons_Retail.svg" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/retail.html">Retail</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="./resources/img/Solutions/icons/Icons_financial .svg" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/financial.html">Financial</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="./resources/img/Solutions/icons/Icons_Industrial & Distribution.svg" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/industrial-distribution.html">Industrial Distribution</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="company-content">
+                                                        <p>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                        </p>
+                                                        <img src="./resources/img/logo.png" alt="">
+                                                </div>
+                                        </div>
+                                        </li>
+                                    <li><a href="./pages/integration.html">Integration</a></li>
+                                    <!-- <li><a href="#">Plans & Pricing</a></li> -->
+                                    <li><a href="./pages/about.html">About us</a></li>
+                                    <li><a href="./pages/contact-us.html" id="contact-us-btn">Contact us</a></li>
+                                </ul>
+                            </nav>
+                            <script>
+                                    const productsBtn = document.getElementById('products');
+                                    const solutionsBtn = document.getElementById('solutions');
+                                    const productsItems = document.getElementById('product-items');
+                                    const solutionsItems = document.getElementById('solution-items');
+                                    const solutionIcon = document.getElementById('solution-icon');
+                                    var productClicked = false,  solutionClicked = false;
+
+                                    const productMenu = () => {
+                                        if (productClicked) {
+                                                productsItems.style.visibility = "collapse";
+                                                productsItems.classList.remove("active-nav-items");
+                                                productClicked = false;
+                                        } else {
+                                                productsItems.style.visibility = "visible";
+                                                productsItems.classList.add("active-nav-items");
+                                                solutionsItems.style.visibility = "collapse";
+                                                solutionClicked = false;
+                                                productClicked = true;
+                                        }
+                                    }
+
+                                    const solutionMenu = () => {
+                                        if (solutionClicked) {
+                                                solutionsItems.style.visibility = "collapse";
+                                                solutionsItems.classList.remove("active-nav-items");
+                                                solutionClicked = false;
+                                        } else {
+                                                productsItems.style.visibility = "collapse";
+                                                solutionsItems.style.visibility = "visible";
+                                                solutionsItems.classList.add("active-nav-items");
+                                                solutionClicked = true;
+                                                productClicked = false;
+                                        }
+                                    }
+
+                                    productsBtn.addEventListener('click', productMenu);
+                                    solutionsBtn.addEventListener('click', solutionMenu);
+                                    solutionIcon.addEventListener('click', solutionMenu);
+
+                                    addEventListener("click", (e) => {
+                                        var values = e.path;
+
+                                        if (e.target.parentNode.id !== "product-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links" && e.target.parentNode.className !== "text-content") {
+                                                if (e.target.id !== "products") {
+                                                    if (productClicked) {
+                                                        productsItems.style.visibility = "collapse";
+                                                        productsItems.classList.remove("active-nav-items");
+                                                        productClicked = false;
+                                                    }
+                                            }
+                                        }
+
+                                        if (e.target.parentNode.id !== "solution-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links"  && e.target.parentNode.className !== "text-content") {
+                                                if (e.target.id !== "solutions") {
+                                                    if (solutionClicked) {
+                                                        solutionsItems.style.visibility = "collapse";
+                                                        solutionsItems.classList.remove("active-nav-items");
+                                                        solutionClicked = false;
+                                                    }
+                                            }
+                                        }
+                                    })
+
+                                    
+
+                                    
+
+
+
+                                //     productsBtn.addEventListener("mouseout", () => {
+                                //         productsItems.style.visibility = "visible";
+                                //                 productsItems.classList.add("active-nav-items");
+                                //     })
+
+                                //     productsItems.addEventListener("mouseover", () => {
+                                //         productsItems.style.visibility = "visible";
+                                //                 productsItems.classList.add("active-nav-items");
+                                //                 productsBtn.removeEventListener("mouseleave", () => {
+                                //                         clearTimeout(time)
+                                //                 })
+                                //     })
+
+                                //     productsBtn.addEventListener("mouseleave", () => {
+                                //            time();
+                                //     });
+                            </script>
+                        </div>
+                </header>
+                <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                                <div class="header-container">
+                                        <div class="text-container">
+                                                <h2>VoIP Phone Solution</h2>
+                                                <p>Designed for business communication needs</p>
+                                                <div class="btn-container">
+                                                        <a href="#">Find Out More</a>
+                                                        <a href="./pages/contact-us.html">Speak to our Specialist</a>
+                                                </div>
+                                        </div>
+                                        <div class="img-container" data-aos="fade-down"
+                                        data-aos-easing="linear"  
+                                        data-aos-once="true"
+                                        data-aos-duration="500">
+                                                <img src="./resources/img/01.png" alt="">
+                                                <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div>
+                                        </div>
+                                </div>
+                          </div>
+                          <div class="swiper-slide">
+                                <div class="header-container">
+                                        <div class="text-container">
+                                                <h2>VoIP Solution for <br> Enterprise</h2>
+                                                <p>Help your team communication from anywhere</p>
+                                                <div class="btn-container">
+                                                        <a href="#">Find Out More</a>
+                                                        <a href="./pages/contact-us.html">Speak to our Specialist</a>
+                                                </div>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="./resources/img/02.png" alt="">
+                                                <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div>
+                                        </div>
+                                </div>
+                          </div>
+                          <div class="swiper-slide">
+                                <div class="header-container">
+                                        <div class="text-container">
+                                                <h2>VoIP Solution for <br>Call Centers</h2>
+                                                <p>Engage customer and Manage Call Campaigns</p>
+                                                <div class="btn-container">
+                                                        <a href="#">Find Out More</a>
+                                                        <a href="./pages/contact-us.html">Speak to our Specialist</a>
+                                                </div>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="./resources/img/03.png" alt="">
+                                                <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div>
+                                        </div>
+                                </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+        </section>
+        <section class="market-section">
+                <div class="section-heading" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true" 
+                data-aos-duration="1000">
+                        <h2>Designed to Meet the Needs of Today's Businesses</h2><br>
+                        <p>
+                                Businesses are constantly evolving. A current and prevalent scenario is the need to be reachable from anywhere and allow your team members to communicate from multiple locations. VoIP solution from Bridgei2p is tailored to your needs.
+                        </p>
+                </div>
+                <div class="market-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1500">
+                        <div class="market-posts">
+                                <h3 class="heading">Boost Productivity</h3>
+                                <div class="img-container">
+                                        <img src="./resources/img/boost-productivity.png" alt="">
+                                        <div class="content">
+                                                <div class="text-content">
+                                                        <br>
+                                                        <p>
+                                                                Connect desk phones, mobile phones, PCs, and a CRM system into one network to unify communications.
+                                                        </p>
+                                                        <!-- <a href="#">Read More</a> -->
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="text-content">
+                                        <!-- <span>By <b>Abdullah</b> | 10 April 2022</span> -->
+                                        <!-- <h3>Increasing Prosperity with Positive Thinking</h3> -->
+                                </div>
+                        </div>
+                        <div class="market-posts">
+                                <h3 class="heading">Cost-Effective</h3>
+                                <div class="img-container">
+                                        <img src="./resources/img/cost-effective.png" alt="">
+                                        <div class="content">
+                                                <div class="text-content">
+                                                        <br>
+                                                        <p>
+                                                                Bridge i2p virtual phone systems eliminate the need for server rooms or outdated office equipment.
+                                                        </p>
+                                                        <!-- <a href="#">Read More</a> -->
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="text-content">
+                                        <!-- <span>By <b>Abdullah</b> | 10 April 2022</span> -->
+                                        <!-- <h3>Increasing Prosperity with Positive Thinking</h3> -->
+                                </div>
+                        </div>
+                        <div class="market-posts">
+                                <h3 class="heading">Great Customer Service</h3>
+                                <div class="img-container">
+                                        <img src="./resources/img/customer-serivce.png" alt="" style="opacity: 0.8;">
+                                        <div class="content">
+                                                <div class="text-content">
+                                                        <br>
+                                                        <p>
+                                                                With smart routing and a virtual assistant, you can reduce hold times and direct calls to the appropriate team member.
+                                                        </p>
+                                                        <!-- <a href="#">Read More</a> -->
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="text-content">
+                                        <!-- <span>By <b>Abdullah</b> | 10 April 2022</span> -->
+                                        <!-- <h3>Great Customer Service</h3> -->
+                                </div>
+                        </div>
+                        <!-- <div class="market-posts">
+                                <div class="img-container">
+                                        <img src="./resources/img/blog-image.png" alt="">
+                                </div>
+                                <div class="text-content">
+                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
+                                        <h3>Increasing Prosperity with Positive Thinking</h3>
+                                </div>
+                        </div>
+                        <div class="market-posts">
+                                <div class="img-container">
+                                        <img src="./resources/img/blog-image-2.png" alt="">
+                                </div>
+                                <div class="text-content">
+                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
+                                        <h3>Increasing Prosperity with Positive Thinking</h3>
+                                </div>
+                        </div>
+                        <div class="market-posts">
+                                <div class="img-container">
+                                        <img src="./resources/img/blog-image-3.png" alt="">
+                                </div>
+                                <div class="text-content">
+                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
+                                        <h3>Increasing Prosperity with Positive Thinking</h3>
+                                </div>
+                        </div> -->
+                </div>
+        </section>
+        <section class="quote-section">
+                <h1>Bring everyone and everything together on Bridge i2p</h1>
+        </section>
+        <section class="featured-section">
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <h2>Featured Products</h2>
+                </div>
+                <div class="featured-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1500">
+                        <ul class="tabs">
+                                <li data-tab-target="#business" class="active tab">
+                                        <img src="./resources/img/Products Icons/icons_Business Phone System.svg" alt="">Business Phone System
+                                </li>
+                                <li data-tab-target="#contact" class="tab">
+                                        <img src="./resources/img/Products Icons/icons_Contact Center.svg" alt="">Contact Centre
+                                </li>
+                                <li data-tab-target="#broadcasting" class="tab">
+                                        <img src="./resources/img/Products Icons/icons_IVR broadcasting.svg" alt="">
+                                        IVR Broadcasting
+                                </li>
+                        </ul>
+                            
+                        <div class="tab-content">
+                                <div id="business" data-tab-content class="active">
+                                        <div class="img-container">
+                                                <img src="./resources/img/business-phone.png" alt="">
+                                        </div>
+                                        <div class="text-content">
+                                                <p>Unified Communication Suite to Help Your Team Connect, Collaborate, And Work from Anywhere.</p>
+                                                <a href="./pages/products.html">View More</a>
+                                        </div>
+                                </div>
+                                <div id="contact" data-tab-content>
+                                        <div class="img-container">
+                                                <img src="./resources/img/contact-center.png" alt="">
+                                        </div>
+                                        <div class="text-content">
+                                                <p>Unified Communication Suite to Help Your Team Connect, Collaborate, And Work from Anywhere.</p>
+                                                <a href="./pages/contact.html">View More</a>
+                                        </div>
+                                </div>
+                                <div id="broadcasting" data-tab-content>
+                                        <div class="img-container">
+                                                <img src="./resources/img/ivr.png" alt="">
+                                        </div>
+                                        <div class="text-content">
+                                                <p>Unified Communication Suite to Help Your Team Connect, Collaborate, And Work from Anywhere.</p>
+                                                <a href="./pages/IVRBroadcast.html">View More</a>
+                                        </div>
+                                </div>
+                      </div>
+                </div>
+        </section>
+        <section class="demo-section">
+                <div class="header-container">
+                        <div class="text-container"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                        data-aos-duration="1000">
+                                <h2 style="text-align: center; font-size: clamp(1.6rem, 4vw, 3rem); font-weight: 600;">Bring everyone and everything <br>together on Bridge i2p</h2>
+                                <div class="btn-container">
+                                        <a href="#">See Pricing</a>
+                                        <a href="#">View Demo<ion-icon name="play"></ion-icon></a>
+                                </div>
+                        </div>
+                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                        data-aos-duration="1000">
+                                <img src="./resources/img/pricing.png" alt="">
+                        </div>
+                </div>
+        </section>
+        <section class="integration-section">
+                <div class="integration-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <h2>Integration</h2>
+                </div>
+                <div class="integration-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1500">
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/bullhorn.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/hubspot.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/int-1.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/int-2.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/int-3.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/int-4.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/salesforce.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/skype.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/teams.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/zoho.png" alt="">
+                        </div>
+                </div>
+                <a   data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000" href="./pages/integration.html">View More</a>
+        </section>
+        <section class="notify-section">
+                <div class="notify-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="text-content">
+                                <h2>Get Started with Bridgei2p Today</h2>
+                        </div>
+                        <a href="./pages/under-contruction.html">Click to call</a>
+                </div>
+                <div class="half-bg"></div>
+        </section>
+        <section class="opinion-section" >
+                <div class="opinion-heading" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000" >
+                        <h2>What Our Clients Are Saying</h2>
+                </div>
+                <div class="opinion-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1500">
+                        <!-- <div class="opinions">
+                                <p>"BridgeCubex Solutions is a very valuable partner in our business; their lines have a 100% up-time and a very prompt support team. Whenever I have any questions, 
+                                        they’ve always been cleared on priority. We’re very happy with the service and will openly recommend them to all."</p>
+                                <div class="img-container">
+                                        <img src="https://www.bridgei2p.com/wp-content/uploads/2015/02/shantanu.jpg" alt="">
+                                </div>
+                                <h4> Mr. Shantanu</h4>
+                                <span>Head of growth</span>
+                                <div class="logo-container">
+                                        <img src="./resources/img/brand.png" alt="">
+                                </div>
+                        </div> -->
+                        <div class="opinions">
+                                <p>"BridgeCubex Solutions is a very valuable partner in our business; their lines have a 100% up-time and a very prompt support team. Whenever I have any questions, they’ve always been cleared on priority. We’re very happy with the service and will openly recommend them to all."</p>
+                                <div class="img-container">
+                                        <img src="https://www.bridgei2p.com/wp-content/uploads/2015/02/shantanu.jpg" alt="">
+                                </div>
+                                <h4> Mr.Shantanu</h4>
+                        </div>
+                        <!--<div class="opinions">
+                                <p>"
+                                        We are utilizing the service of BridgeCubex solutions from past 2 years . The response to issues has been improved and prompt, usually be done remotely and at times over the phone which saves time. The downtime I would glad to say not heard or experienced. Service is well managed, We would not hesitate to recommend the services of BridgeCubex .
+                                        "</p>
+                                <div class="img-container">
+                                        <img src="https://www.bridgei2p.com/wp-content/uploads/2015/02/SBT-Reasearch-sagar-tarawade--300x300.jpg" alt="">
+                                </div>
+                                <h4> Mr.Sagar Tarawade</h4>
+                        </div>-->
+                        <div class="opinions">
+                                <p>"
+                                        Got the service of Bridgei2p for a company based locally and overseas - installation, connectivity, service and mainly quality is excellent! Team did a fab job in coordinating and always available handy for any assistance.
+                                        "</p>
+                                <div class="img-container">
+                                        <img src="https://lh3.googleusercontent.com/a-/AOh14GjtSds4f795j7MzfjOqRJArnKz7yoz7A-RJGymYvQs=w60-h60-p-rp-mo-br100" alt="">
+                                </div>
+                                <h4>George Christy</h4>
+                        </div>
+                        <div class="opinions">
+                                <p>"The Technical Team is good and very quick in responding back to any request or issues. Manoj from the Technical Team helped me today - his service was really great and fixed a big problem with my softphone.
+
+                                        All the best to Bridgei2p Team."</p>
+                                <div class="img-container">
+                                        <img src="https://lh3.googleusercontent.com/a-/AOh14GiXQoGCUwVSuggFkcjDovmuQq2EGLbnZCN4pXcx4aY=w60-h60-p-rp-mo-br100" alt="">
+                                </div>
+                                <h4>Sudhakar V</h4>
+                        </div>
+                        <div class="opinions">
+                                <p>"
+                                        Bridgei2p provides good service and they support as and when required. There was an issue towards speakers, Bi2p team visited and tried to rectify the issue and they are unable to rectify, later they replaced the devices or phones immediately. thanks team.
+                                        "</p>
+                                <div class="img-container">
+                                        <img src="https://lh3.googleusercontent.com/a-/AOh14GjFO7cgLhDovGs9a3hMt_7rAiIqcl8dZgY9N7NXuw=w60-h60-p-rp-mo-br100" alt="">
+                                </div>
+                                <h4>Naveed Pasha</h4>
+                        </div>
+                        <div class="opinions">
+                                <p>
+                                        We and our clients are Very Happy for your Support and Services. Since One year we are using your services and support.  
+ Even single time also we have not faced any technical challenge and If we request any other technical support,  immediately your team  resolved the query. Keep Going…”
+
+                                </p>
+                                <div class="img-container">
+                                        <img src="./resources/img/img-1.jpeg" alt="">
+                                </div>
+                                <h4>Piramanayagam S</h4>
+                        </div>
+                        <div class="opinions">
+                                <p>Running a company that offers 24/7 care requires a phone system and service. Company like Bridgei2p that is available at a second’s notice around the clock every day of the year. Their service technicians go above and beyond the call of duty to make sure our phone system and business runs smoothly.</p>
+                                <div class="img-container">
+                                        <img src="./resources/img/img-2.jpeg" alt="">
+                                </div>
+                                <h4>Raj Kanojia</h4>
+                        </div>
+                        <div class="opinions">
+                                <p>
+                                        I would like to thank Mr. Karthik and entire Bridgei2p team for your excellent service to our organization. We are really impressed by your Quality and Timely support that you have been providing us since past 5 years. We look forward to a long-term business relationship with you.
+                                </p>
+                                <div class="img-container">
+                                        <img src="./resources/img/img-3.jpeg" alt="">
+                                </div>
+                                <h4>Deeshith Shetty </h4>
+                        </div>
+                        <div class="opinions">
+                                <p>
+                                         I once again thank you for your excellent service from your team and especially Shilpa from Bridgei2p VoIP. She really rocks and she is very polite attending the calls whenever we require, I appreciate your Service.
+                                </p>
+                                <div class="img-container">
+                                        <img src="./resources/img/img-4.jpeg" alt="">
+                                </div>
+                                <h4>George</h4>
+                        </div>
+                        <!-- <div class="opinions">
+                                <p>"Typeform is a product-grade system for our entire growth funnel"</p>
+                                <div class="img-container">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                </div>
+                                <h4>Gaurav Vohra</h4>
+                                <span>Head of growth</span>
+                                <div class="logo-container">
+                                        <img src="./resources/img/brand.png" alt="">
+                                </div>
+                        </div>
+                        <div class="opinions">
+                                <p>"Typeform is a product-grade system for our entire growth funnel"</p>
+                                <div class="img-container">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                </div>
+                                <h4>Gaurav Vohra</h4>
+                                <span>Head of growth</span>
+                                <div class="logo-container">
+                                        <img src="./resources/img/brand.png" alt="">
+                                </div>
+                        </div>
+                        <div class="opinions">
+                                <p>"Typeform is a product-grade system for our entire growth funnel"</p>
+                                <div class="img-container">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                </div>
+                                <h4>Gaurav Vohra</h4>
+                                <span>Head of growth</span>
+                                <div class="logo-container">
+                                        <img src="./resources/img/brand.png" alt="">
+                                </div>
+                        </div>
+                        <div class="opinions">
+                                <p>"Typeform is a product-grade system for our entire growth funnel"</p>
+                                <div class="img-container">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                </div>
+                                <h4>Gaurav Vohra</h4>
+                                <span>Head of growth</span>
+                                <div class="logo-container">
+                                        <img src="./resources/img/brand.png" alt="">
+                                </div>
+                        </div>
+                        <div class="opinions">
+                                <p>"Typeform is a product-grade system for our entire growth funnel"</p>
+                                <div class="img-container">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                </div>
+                                <h4>Gaurav Vohra</h4>
+                                <span>Head of growth</span>
+                                <div class="logo-container">
+                                        <img src="./resources/img/brand.png" alt="">
+                                </div>
+                        </div>
+                        <div class="opinions">
+                                <p>"Typeform is a product-grade system for our entire growth funnel"</p>
+                                <div class="img-container">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                </div>
+                                <h4>Gaurav Vohra</h4>
+                                <span>Head of growth</span>
+                                <div class="logo-container">
+                                        <img src="./resources/img/brand.png" alt="">
+                                </div>
+                        </div>
+                        <div class="opinions">
+                                <p>"Typeform is a product-grade system for our entire growth funnel"</p>
+                                <div class="img-container">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                </div>
+                                <h4>Gaurav Vohra</h4>
+                                <span>Head of growth</span>
+                                <div class="logo-container">
+                                        <img src="./resources/img/brand.png" alt="">
+                                </div>
+                        </div>
+                        <div class="opinions">
+                                <p>"Typeform is a product-grade system for our entire growth funnel"</p>
+                                <div class="img-container">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                </div>
+                                <h4>Gaurav Vohra</h4>
+                                <span>Head of growth</span>
+                                <div class="logo-container">
+                                        <img src="./resources/img/brand.png" alt="">
+                                </div>
+                        </div> -->
+                </div>
+        </section>
+        <section class="quote-section">
+                <h1>VoIP Business Phone Systems to Give Your Business an Edge</h1>
+        </section>
+        <section class="clients-section">
+                <div class="client">
+                        <h2>Our Clients</h2>
+                        <div class="logo-section" >
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="./resources/img/Client/Client Logos_aayuja.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_BDS.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_Collabera.svg" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="./resources/img/Client/Client Logos_Boston.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_eclinical solutions.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_freshdesk.svg" alt="">
+                                        </div>
+                                </div>
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="./resources/img/Client/Client Logos_genisys.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_iquanti.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_hackerearth.svg" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="./resources/img/Client/Client Logos_JMR.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_nqa.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_opteamix.svg" alt="">
+                                        </div>
+                                </div>
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="./resources/img/Client/Client Logos_PFS.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_progility.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_Suntechno.svg" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="./resources/img/Client/Client Logos_Tavant.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_Techaspect.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_walmart.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_welspun.svg" alt="">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="partner">   
+                        <h2>Our Partners</h2>
+                        <div class="logo-section">
+                                <div class="logo-container"  >
+                                        <div class="img-container">
+                                                <img src="./resources/img/Partner/Partner logos_asttecs.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_cisco.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_contaque.svg" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="./resources/img/Partner/Partner logos_digium.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Grandstream.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Level 3.svg" alt="">
+                                        </div>
+                                </div>
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="./resources/img/Partner/Partner logos_Panasonic.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Polycom.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Porta one.svg" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="./resources/img/Partner/Partner logos_Sangoma.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Tata.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Yealink.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Zoom.svg" alt="">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <footer>
+                <div class="sitemap-links">
+                        <div class="sitemap">
+                                <h3>Company</h3>
+                                <ul>
+                                        <li><a href="./pages/about.html">About us</a></li>
+                                        <li><a href="./pages/contact-us.html">Contact Us </a></li>
+                                        <li><a href="#">Careers</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Products</h3>
+                                <ul>
+                                        <li><a href="./pages/products.html"> Business Phone System</a></li>
+                                        <li><a href="./pages/contact.html"> Cloud Contact Centre Solution</a></li>
+                                        <li><a href="./pages/IVRBroadcast.html"> Voice/VR Broadcasting</a></li>
+                                </ul>
+                                <h3>Solutions</h3>
+                                <ul>
+                                        <li><a href="./pages/solutions/professional-services.html"> Professional Services</a></li>
+                                        <li><a href="./pages/solutions/call-center.html"> Call Center</a></li>
+                                        <li><a href="./pages/solutions/health.html"> Healthcare</a></li>
+                                        <li><a href="./pages/solutions/financial.html"> Financial Services</a></li>
+                                        <li><a href="./pages/solutions/retail.html"> Retail</a></li>
+                                        <li><a href="./pages/solutions/industrial-distribution.html"> Industrial/Distribution</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Plans</h3>
+                                <ul>
+                                        <li><a href="#"> US/Cannada Unlimited</a></li>
+                                        <li><a href="#"> Asia Pacific Unlimited</a></li>
+                                        <li><a href="#"> Europe Unlimited</a></li>
+                                        <li><a href="#"> Unlimited US/Cannada
+                                                <div>
+                                                        <p>+ 10 Selected Countries</p>
+                                                </div></a>
+                                        </li>
+                                        <li><a href="#"> World Unlimited + 63 Countries </a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Integrations</h3>
+                                <ul>
+                                        <li><a href="#"> Salesforce</a></li>
+                                        <li><a href="#"> Zendesk</a></li>
+                                        <li><a href="#"> Zoho Crm </a></li>
+                                        <li><a href="#"> Bullhorn</a></li>
+                                        <li><a href="#"> HubSpot</a></li>
+                                        <li><a href="#"> SugarCRM & More</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Resources</h3>
+                                <ul>
+                                        <li><a href="#"> Press Release</a></li>
+                                        <li><a href="#"> Testimonials</a></li>
+                                        <li><a href="#"> Knowledge Base</a></li>
+                                        <li><a href="#"> Blogs</a></li>
+                                        <li><a href="#"> Gallery</a></li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="links">
+                        <div class="legal-section">
+                                <div class="legal">
+                                        <h3>COPYRIGHTS DETAILS</h3>
+                                        <ul>
+                                                <li><a href="#">T&C</a></li>
+                                                <li><a href="#">Legal</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#">Cookie</a></li>
+                                                <li><a href="#">Preferances</a></li>
+                                                <li><a href="#">Accessibility</a></li>
+                                                <li><a href="#">Patents</a></li>
+                                                <li><a href="#">Sitemaps</a></li>
+                                        </ul>
+                                </div>
+                                <div class="social-links">
+                                        <a href="https://www.facebook.com/Bridgei2p"><ion-icon name="logo-facebook"></ion-icon></a>
+                                        <a href="https://www.instagram.com/rajeshbridge/"><ion-icon name="logo-instagram"></ion-icon></a>
+                                        <a href="https://www.linkedin.com/company/bridgei2p/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                                        <a href="https://www.youtube.com/channel/UCLV-WbPUXNCY9fOot8pURNA/"><ion-icon name="logo-youtube"></ion-icon></a>
+                                        <a href="https://twitter.com/bridgei2p"><ion-icon name="logo-twitter"></ion-icon></a>
+                                </div>
+                        </div>
+                </div>
+        </footer>
+</body>
+</html>
