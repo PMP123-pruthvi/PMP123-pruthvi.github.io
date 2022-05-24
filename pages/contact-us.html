@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bridge Ip2</title>
+        
+
         <link rel="stylesheet" href="../resources/styles/contact-us.css">
         <script src="../resources/scripts/script.js" defer></script>
 
@@ -28,6 +30,10 @@
         <!-- Swiper JS -->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
+
+        <!--bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
 </head>
 <body>
         <section class="head-section">
@@ -327,13 +333,102 @@
                         <div class="cards">
                                 <p>Call us now</p>
                                 <ion-icon name="call" ></ion-icon>
-                                <h2>+91 80 4814 7467</h2>
+                                <h4>+91 80 4814 7467</h4>
                         </div>
                         <div class="cards" style="padding-top:20px">
                                 <p>Ask for a Demo</p>
                                 <ion-icon name="help-circle"></ion-icon>
-                                <button>Book Now</button>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" >Book Now</button>
+
+                                <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content" >
+            <div class="modal-header">
+              <h5 class="modal-title " style="display:flex ; justify-content:center;" id="exampleModalLabel"><strong>SCHEDULE A DEMO</strong></h5>
+              <button type="button" class="btn-close" style="background-color:white ;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body " style="background-color:gainsboro ;">
+                    <form class="row g-2">
+
+                            <div class="col-4">
+                                    <img src="/resources/img/timing.png" width="380px" height="380px" style="margin-top:43px ;">
+                            </div>
+                            <div class="col-md-8">
+                            <div class="row g-5 p-3">
+                        <div class="col-md-6 ">
+                          <label for="inputEmail4"  class="form-label">Contact Person:</label>
+                          <input type="text" required class="form-control" id="inputEmail4">
                         </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail4"  class="form-label">Email:</label>
+                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"  required class="form-control" id="inputEmail4">
+                          </div>
+                        </div>
+                        <div class="row g-5 p-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4"  class="form-label">Phone Number:</label>
+                            <input type="tel"  maxlength="10" required class="form-control" id="inputEmail4">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Company Name:</label>
+                            <input type="text" required class="form-control" id="inputPassword4">
+                          </div>
+                        </div>
+                        <div class="row g-5 p-3">
+                          <div class="col-md-6">
+                            <label for="inputEmail4"  class="form-label">Demo Date:</label>
+                            <input type="date" required class="form-control" id="inputEmail4">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputState" class="form-label ">Products:</label>
+                            <select class="form-select multiple" id="specificSizeSelect" >
+                                <option selected></option>
+                                <option value="1">SoftPhone</option>
+                                <option value="2">IP Phones</option>
+                                <option value="3">IP PBX</option>
+                                <option value="4">Video Conference</option>
+                                <option value="5">GSM Gateways</option>
+                                <option value="6">CRM</option>
+                                <option value="7">Voice Logger</option>
+                                <option value="8">VoIP Gateways</option>
+                                <option value="9">IP Phone Headsets</option>
+                                <option value="10">Wifi Access Points</option>
+                                <option value="11">SIP Door Phones</option>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="row g-5 p-3">
+                          <div class="col-md-6">
+                            <label for="inputState" class="form-label ">Services:</label>
+                            <select class="form-select multiple" id="specificSizeSelect" >
+                                <option selected></option>
+                                <option value="1">Contact Center Solution</option>
+                                <option value="2">Call Center Dialer</option>
+                                <option value="3">International Unlimited Plans</option>
+                                <option value="4">ITFS (International Toll Free)</option>
+                                <option value="5">Toll Free Number </option>
+                                <option value="6">Hosted Cloud PBX</option>
+                                <option value="7">Hosted IVR</option>
+                              </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="exampleFormControlTextarea1"  class="form-label">Comments:</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                          </div>
+                        </div>
+                </div>
+                    </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+                        </div>
+
                         <div class="cards" style="padding-top:22px; padding-bottom: 35px;">
                                 <p >Email us Now</p>
                                 <ion-icon name="mail" style="padding-top:5px ; padding-bottom:5px ;"></ion-icon>
@@ -441,10 +536,10 @@
         </div>
       
         <footer>
-                <div class="sitemap-links">
+                <div class="sitemap-links" >
                         <div class="sitemap">
                                 <h3>Company</h3>
-                                <ul>
+                                <ul style="margin-left: -30px;">
                                         <li><a href="./about.html">About us</a></li>
                                         <li><a href="./contact-us.html">Contact Us </a></li>
                                         <li><a href="#">Careers</a></li>
@@ -452,13 +547,13 @@
                         </div>
                         <div class="sitemap">
                                 <h3>Products</h3>
-                                <ul>
+                                <ul style="margin-left: -30px;">
                                         <li><a href="./products.html"> Business Phone System</a></li>
                                         <li><a href="./contact.html"> Cloud Contact Centre Solution</a></li>
                                         <li><a href="./IVRBroadcast.html"> Voice/VR Broadcasting</a></li>
                                 </ul>
                                 <h3>Solutions</h3>
-                                <ul>
+                                <ul style="margin-left: -30px;">
                                         <li><a href="./solutions/professional-services.html"> Professional Services</a></li>
                                         <li><a href="./solutions/call-center.html"> Call Center</a></li>
                                         <li><a href="./solutions/health.html"> Healthcare</a></li>
@@ -469,7 +564,7 @@
                         </div>
                         <div class="sitemap">
                                 <h3>Plans</h3>
-                                <ul>
+                                <ul style="margin-left: -30px;">
                                         <li><a href="#"> US/Cannada Unlimited</a></li>
                                         <li><a href="#"> Asia Pacific Unlimited</a></li>
                                         <li><a href="#"> Europe Unlimited</a></li>
@@ -483,7 +578,7 @@
                         </div>
                         <div class="sitemap">
                                 <h3>Integrations</h3>
-                                <ul>
+                                <ul style="margin-left: -30px;">
                                         <li>Salesforce</li>
                                         <li>Zendesk</li>
                                         <li>Zoho Crm </li>
@@ -494,7 +589,7 @@
                         </div>
                         <div class="sitemap">
                                 <h3>Resources</h3>
-                                <ul>
+                                <ul style="margin-left: -30px;">
                                         <li><a href="#"> Press Release</a></li>
                                         <li><a href="#"> Testimonials</a></li>
                                         <li><a href="#"> Knowledge Base</a></li>
@@ -507,7 +602,7 @@
                         <div class="legal-section">
                                 <div class="legal">
                                         <h3>COPYRIGHTS DETAILS</h3>
-                                        <ul>
+                                        <ul >
                                                 <li><a href="#">T&C</a></li>
                                                 <li><a href="#">Legal</a></li>
                                                 <li><a href="#">Privacy Policy</a></li>
