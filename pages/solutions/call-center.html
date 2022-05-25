@@ -28,6 +28,198 @@
         <!-- Swiper JS -->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
+
+<style>
+
+header nav ul li .nav-items .company-content {
+  width: 300px;
+  margin: 0 15px;
+}
+
+header nav ul li .nav-items .company-content p {
+  font-size: 0.9rem;
+}
+
+header nav ul li .nav-items .company-content img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 662px) {
+  header nav ul li .nav-items {
+    width: 100%;
+    max-width: 600px;
+    top: 150%;
+    left: 0%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+            box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+    padding: 20px;
+    visibility: collapse;
+    background-color: #fff;
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header nav ul li .nav-items .items-content {
+    width: 400px;
+    margin: 0 15px;
+  }
+  header nav ul li .nav-items .items-content .heading {
+    display: none;
+    margin-bottom: 20px;
+  }
+  header nav ul li .nav-items .items-content .heading p {
+    font-size: 0.9rem;
+    color: rgba(25, 26, 25, 0.9);
+  }
+  header nav ul li .nav-items .items-content .links .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 10px 0;
+  }
+  header nav ul li .nav-items .items-content .links .link img {
+    width: 35px;
+    height: 35px;
+    margin: 0px 10px;
+  }
+  header nav ul li .nav-items .items-content .links .link .text-content a {
+    font-weight: 600;
+  }
+  header nav ul li .nav-items .items-content .links .link .text-content p {
+    display: none;
+    font-size: 0.7rem;
+    color: rgba(25, 26, 25, 0.95);
+  }
+  header nav ul li .nav-items .company-content {
+    display: none;
+    width: 300px;
+    margin: 0 15px;
+  }
+  header nav ul li .nav-items .company-content p {
+    font-size: 0.9rem;
+  }
+  header nav ul li .nav-items .company-content img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.features-section {
+  padding: 40px 0;
+}
+
+.features-section .section-heading {
+  width: 94%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.features-section .section-heading h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+.features-section .section-heading p {
+  font-size: 1.2rem;
+}
+
+.features-section .features {
+  width: 94%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1100px) {
+  .features-section .features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.features-section .features .features-card {
+  text-align: center;
+  margin: 40px 15px;
+  max-width: 350px;
+}
+
+.features-section .features .features-card img {
+  width: 100px;
+  margin: 10px auto;
+}
+
+.features-section .features .features-card h3 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.features-section .features .features-card p {
+  text-align: center;
+  max-width: 300px;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+.features-section .features .features-card .full-content {
+  display: none;
+}
+
+.features-section .features .features-card button {
+  padding: 12px 35px;
+  margin: 30px auto;
+  background-color: #FF8303;
+  color: #fafafa;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features-section .features .features-card button:hover {
+  background-color: rgba(255, 131, 3, 0.8);
+}
+
+.benefit-business-contain-section {
+  background-color: #BDF3F4;
+  padding: 0px 0;
+  overflow-x: visible;
+}
+</style>
 </head>
 <body>
         <section class="head-section">
@@ -105,7 +297,7 @@
                                                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
                                                                             Aliquam tempus nibh eros, ac consequat nisl condimentum non.
                                                                     </p>
-                                                                    <img src="../../resources/img/logo.png" alt="">
+                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="160px" max-width="100%" alt="">
                                                             </div>
                                                     </div>
                                             </li>
@@ -181,7 +373,7 @@
                                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
                                                                     Aliquam tempus nibh eros, ac consequat nisl condimentum non.
                                                             </p>
-                                                            <img src="../../resources/img/logo.png" alt="">
+                                                            <img src="../../resources/img/image-in-the-place-logo.png" alt="">
                                                     </div>
                                             </div>
                                             </li>
@@ -282,12 +474,12 @@
                           <div class="swiper-slide">
                                 <div class="header-container">
                                         <div class="text-container">
-                                                <span>Home > Solution > Call Center</span>
+                                                <span><a href="/index.html" style="text-decoration-line:none ;" > Home</a> > <a href="/pages/solutions/professional-services.html" style="text-decoration-line:none ;" > Solutions</a> > Call Center</span>
                                                 <h2>Communication Solutions for <br> Call Center </h2>
                                                 <p>Using call centers to improve customer experience through collaboration and communication.</p>
                                                 <div class="btn-container">
-                                                        <button>Enquiry Now</button>
-                                                        <button>Play Video<ion-icon name="play"></ion-icon></button>
+                                                        <button><a href="/pages/contact-us.html">Enquiry Now</a></button>
+                                                        <button><a href="/pages/contact-us.html">Get Quote</a></button>
                                                 </div>
                                         </div>
                                         <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"  
@@ -336,30 +528,54 @@
                 </div>
         </section>
 
-        <section class="who-section">
-                <div class="who-layout"  data-aos="fade-up" data-aos-easing="linear"  
+        <section class="features-section" style="margin-top:-50px ;">
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                 data-aos-duration="1000">
-                                <div class="text-content">
-                                        <p style="text-align: left; margin-left: 20px; margin-bottom: 10px;">
-                                                <b>We are aware of your priorities:</b>
+                        <h2>We Are Aware Of Your Priorities:</h2>
+                        <!-- <p>The service we offer is specially designed to meet your needs</p> -->
+                </div>
+                <div class="features-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="features">
+                                <div class="features-card">
+                                        <img src="/resources/img/Icons-call/Icons_rising cost.svg" alt="">
+                                        <h3>COST</h3>
+                                        <p class="half-content">
+                                                There are no rising costs
                                         </p>
-                                        <p style="text-align: left; margin-left: 20px;">
-                                                <ion-icon name="caret-forward"></ion-icon> There are no rising costs.
-                                        </p>
-                                        <p style="text-align: left; margin-left: 20px;">
-                                                <ion-icon name="caret-forward"></ion-icon> It's critical to have insight into your team in order to ensure that KPIs are met.
-                                        </p>
-                                        <p style="text-align: left; margin-left: 20px;">
-                                                <ion-icon name="caret-forward"></ion-icon> Card transactions that are compliant and have a built-in DTMF function.
-                                        </p>
-                                        <p style="text-align: left; margin-left: 20px;">
-                                                <ion-icon name="caret-forward"></ion-icon> All major management systems include CRM connection.
-                                        </p>
+                                       
                                 </div>
+                                <div class="features-card">
+                                        <img src="/resources/img/Icons-call/Icons_insight team.svg" alt="">
+                                        <h3>KPIs</h3>
+                                        <p class="half-content">
+                                                It's critical to have insight into your team in order to ensure that KPIs are met.
+                                        </p>
+                        
+                                </div>
+                                <div class="features-card">
+                                        <img src="/resources/img/Icons-call/Icons_Card transaction.svg" alt="">
+                                        <h3>DTMF</h3>
+                                        <p class="half-content">
+                                                Card transactions that are compliant and have a built-in DTMF function.
+                                        </p>
+                                        
+                                </div>
+                        
+                        <div class="features-card">
+                                <img src="/resources/img/Icons-call/Icons_CRM Connection.svg" alt="">
+                                <h3>CRM</h3>
+                                <p class="half-content">
+                                        All major management systems include CRM connection.
+                                </p>
                         </div>
                 </div>
+                </div>
         </section>
+
+ 
 
         <section class="business-edition-section">
                 <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
@@ -553,7 +769,7 @@ Campaigns are used to administer Dialer. Every Campaign has a list of Leads and 
                         <h3 style="font-size: clamp(1.3rem, 4vw, 1.8rem); max-width: 1000px; ">
                                 Partner with us and we’ll help you develop a personalized solution and discuss specific telecommunications alternatives with you.
                         </h3>
-                        <a href="./contact-us.html">Request a demo</a>
+                        <a href="/pages/contact-us.html#request-demo">Request a demo</a>
                 </div>
         </section>      
 
@@ -591,7 +807,7 @@ Campaigns are used to administer Dialer. Every Campaign has a list of Leads and 
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Autem ut vel eum sed eaque dicta accusamus nobis, exercitationem officia accusantium impedit praesentium unde minus aliquid, facilis voluptatibus. Eius, nihil itaque?
                         </p>
-                        <a href="#">See all customer stories</a>
+                        <a href="/index.html#comments">See all customer stories</a>
                 </div>
                 <!-- <button>View More</button> -->
         </section>

@@ -30,6 +30,97 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
 
         <style>
+
+header nav ul li .nav-items .company-content {
+  width: 300px;
+  margin: 0 15px;
+}
+
+header nav ul li .nav-items .company-content p {
+  font-size: 0.9rem;
+}
+
+header nav ul li .nav-items .company-content img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 662px) {
+  header nav ul li .nav-items {
+    width: 100%;
+    max-width: 600px;
+    top: 150%;
+    left: 0%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+            box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+    padding: 20px;
+    visibility: collapse;
+    background-color: #fff;
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header nav ul li .nav-items .items-content {
+    width: 400px;
+    margin: 0 15px;
+  }
+  header nav ul li .nav-items .items-content .heading {
+    display: none;
+    margin-bottom: 20px;
+  }
+  header nav ul li .nav-items .items-content .heading p {
+    font-size: 0.9rem;
+    color: rgba(25, 26, 25, 0.9);
+  }
+  header nav ul li .nav-items .items-content .links .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 10px 0;
+  }
+  header nav ul li .nav-items .items-content .links .link img {
+    width: 35px;
+    height: 35px;
+    margin: 0px 10px;
+  }
+  header nav ul li .nav-items .items-content .links .link .text-content a {
+    font-weight: 600;
+  }
+  header nav ul li .nav-items .items-content .links .link .text-content p {
+    display: none;
+    font-size: 0.7rem;
+    color: rgba(25, 26, 25, 0.95);
+  }
+  header nav ul li .nav-items .company-content {
+    display: none;
+    width: 300px;
+    margin: 0 15px;
+  }
+  header nav ul li .nav-items .company-content p {
+    font-size: 0.9rem;
+  }
+  header nav ul li .nav-items .company-content img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+
 .linked-section {
   background-color: #1A1694;
   padding: 50px 0;
@@ -90,6 +181,102 @@
 }
 
 .linked-section .linked-layout a:hover {
+  background-color: rgba(255, 131, 3, 0.8);
+}
+
+/*features*/
+
+.features-section {
+  padding: 40px 0;
+}
+
+.features-section .section-heading {
+  width: 94%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.features-section .section-heading h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+.features-section .section-heading p {
+  font-size: 1.2rem;
+}
+
+.features-section .features {
+  width: 94%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1100px) {
+  .features-section .features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.features-section .features .features-card {
+  text-align: center;
+  margin: 40px 15px;
+  max-width: 350px;
+}
+
+.features-section .features .features-card img {
+  width: 100px;
+  margin: 10px auto;
+}
+
+.features-section .features .features-card h3 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.features-section .features .features-card p {
+  text-align: center;
+  max-width: 300px;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+.features-section .features .features-card .full-content {
+  display: none;
+}
+
+.features-section .features .features-card button {
+  padding: 12px 35px;
+  margin: 30px auto;
+  background-color: #FF8303;
+  color: #fafafa;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features-section .features .features-card button:hover {
   background-color: rgba(255, 131, 3, 0.8);
 }
         </style>
@@ -172,7 +359,7 @@
                                                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
                                                                             Aliquam tempus nibh eros, ac consequat nisl condimentum non.
                                                                     </p>
-                                                                    <img src="../resources/img/logo.png" alt="">
+                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="160px" max-width="100%" alt="">
                                                             </div>
                                                     </div>
                                             </li>
@@ -248,7 +435,7 @@
                                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
                                                                     Aliquam tempus nibh eros, ac consequat nisl condimentum non.
                                                             </p>
-                                                            <img src="../resources/img/logo.png" alt="">
+                                                            <img src="../resources/img/image-in-the-place-logo.png" alt="">
                                                     </div>
                                             </div>
                                             </li>
@@ -527,7 +714,7 @@
                         <h3 style="font-size: clamp(1.3rem, 4vw, 1.8rem); max-width: 1100px; ">
                                 “Want to communicate without any hassles, at optimum value packages?<br> Jump on board with Bridgei2p.”
                         </h3>
-                        <a href="./contact-us.html">Clik to Call</a>
+                        <a href="./contact-us.html">Click to Call</a>
                 </div>
         </section> 
 
@@ -749,9 +936,26 @@
                                                 <br>
                                                 Email: sales@bridgei2p.com
                                         </p>
+                                        <h5>International Office - UK</h5>
+                                        <p>
+                                                Wenlock Road, London, N1 7GU, United Kingdom.
+                                                <br>
+                                                Phone:  +1-9178191010
+                                                <br>
+                                                Email: sales@bridgei2p.com
+                                        </p>
+
+                                        <h5>International Office - USA</h5>
+                                        <p>
+                                                2591 Dallas Parkway, Frisco, TX 75034, U.S.A.
+                                                <br>
+                                                Phone:  +1-9178191010
+                                                <br>
+                                                Email: sales@bridgei2p.com
+                                        </p>
                                 </div>
                                 <div class="img-container">
-                                        <img src="../resources/img/global-reach.png" alt="">
+                                        <img src="../resources/img/Untitled-2-01.png" alt="">
                                         <!-- <div class="circle-yellow"></div>
                                         <div class="circle-grey"></div> -->
                                 </div>
@@ -759,33 +963,50 @@
                 </div>
         </section>
 
-        <section class="business-edition-section">
-                <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+        <section class="features-section">
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                 data-aos-duration="1000">
-                        <div class="tab-content" >
-                                <div class="text-content">
-                                        <h2 style="font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom:20px;">Why Bridgei2p</h2>
-                                        <p>
-                                                <ion-icon name="caret-forward"></ion-icon><b>Intuitive</b> - Establish, set up and manage your online phone system in a user-friendly interface and in real-time. 
+                        <h2>Why Bridgei2p</h2>
+                        <!-- <p>The service we offer is specially designed to meet your needs</p> -->
+                </div>
+                <div class="features-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="features">
+                                <div class="features-card">
+                                        <img src="../resources/img/about-icons/icons_abt us_page_Intuitive.svg" alt="">
+                                        <h3>Intuitive</h3>
+                                        <p class="half-content">
+                                                Establish, set up and manage your online phone system in a user-friendly interface and in real-time.
                                         </p>
-                                        <p>
-                                                <ion-icon name="caret-forward"></ion-icon><b>Flexible and Affordable Price</b>  - We offer a scalable solution according to your needs. Pay-as-you-go products are offered at very flexible terms.
-                                        </p>
-                                        <p>
-                                                <ion-icon name="caret-forward"></ion-icon><b>24/7 Support</b>  - Customer service is the heart of our mission. Whenever, wherever.
-                                        </p>
-                                        <p>
-                                                <ion-icon name="caret-forward"></ion-icon><b>Professional Services</b>  - Without undermining any quality, we retain our clients. So, expect no less than the best.
-                                        </p>
+                                       
                                 </div>
-                                <div class="container" style="margin-right: 100px;">
-                                        <img src="../resources/img/Image-5.png" width="450px" height="380px" alt="">
-                                        <!-- <div class="circle-yellow"></div>
-                                        <div class="circle-grey"></div> -->
+                                <div class="features-card">
+                                        <img src="../resources/img/about-icons/icons_abt us_page_Flexible and Affordable Price.svg" alt="">
+                                        <h3>Flexible And Affordable Price</h3>
+                                        <p class="half-content">
+                                                We offer a scalable solution according to your needs. Pay-as-you-go products are offered at very flexible terms.
+                                        </p>
+                        
                                 </div>
+                                <div class="features-card">
+                                        <img src="../resources/img/about-icons/icons_abt us_page_24-7 Support.svg" alt="">
+                                        <h3>24/7 Support</h3>
+                                        <p class="half-content">
+                                                Customer service is the heart of our mission. Whenever, wherever.
+                                        </p>
+                                        
+                                </div>
+                        
+                        <div class="features-card">
+                                <img src="../resources/img/about-icons/icons_abt us_page_Professional Services.svg" alt="">
+                                <h3>Professional Services</h3>
+                                <p class="half-content">
+                                        Without undermining any quality, we retain our clients. So, expect no less than the best.
+                                </p>
                         </div>
-                       
+                </div>
                 </div>
         </section>
 

@@ -34,6 +34,99 @@
         <!--bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+
+        <style>
+header nav ul li .nav-items .company-content {
+  width: 300px;
+  margin: 0 15px;
+}
+
+header nav ul li .nav-items .company-content p {
+  font-size: 0.9rem;
+}
+
+header nav ul li .nav-items .company-content img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 662px) {
+  header nav ul li .nav-items {
+    width: 100%;
+    max-width: 600px;
+    top: 150%;
+    left: 0%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+            box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+    padding: 20px;
+    visibility: collapse;
+    background-color: #fff;
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header nav ul li .nav-items .items-content {
+    width: 400px;
+    margin: 0 15px;
+  }
+  header nav ul li .nav-items .items-content .heading {
+    display: none;
+    margin-bottom: 20px;
+  }
+  header nav ul li .nav-items .items-content .heading p {
+    font-size: 0.9rem;
+    color: rgba(25, 26, 25, 0.9);
+  }
+  header nav ul li .nav-items .items-content .links .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 10px 0;
+  }
+  header nav ul li .nav-items .items-content .links .link img {
+    width: 35px;
+    height: 35px;
+    margin: 0px 10px;
+  }
+  header nav ul li .nav-items .items-content .links .link .text-content a {
+    font-weight: 600;
+  }
+  header nav ul li .nav-items .items-content .links .link .text-content p {
+    display: none;
+    font-size: 0.7rem;
+    color: rgba(25, 26, 25, 0.95);
+  }
+  header nav ul li .nav-items .company-content {
+    display: none;
+    width: 300px;
+    margin: 0 15px;
+  }
+  header nav ul li .nav-items .company-content p {
+    font-size: 0.9rem;
+  }
+  header nav ul li .nav-items .company-content img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+        </style>
+
 </head>
 <body>
         <section class="head-section">
@@ -111,7 +204,7 @@
                                                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
                                                                             Aliquam tempus nibh eros, ac consequat nisl condimentum non.
                                                                     </p>
-                                                                    <img src="../resources/img/logo.png" alt="">
+                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="160px" max-width="100%" alt="">
                                                             </div>
                                                     </div>
                                             </li>
@@ -187,7 +280,7 @@
                                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
                                                                     Aliquam tempus nibh eros, ac consequat nisl condimentum non.
                                                             </p>
-                                                            <img src="../resources/img/logo.png" alt="">
+                                                            <img src="../resources/img/image-in-the-place-logo.png" alt="">
                                                     </div>
                                             </div>
                                             </li>
@@ -300,6 +393,7 @@
                                         </div>
                                 </div>
                           </div>
+                          
                           <!-- <div class="swiper-slide">
                                 <div class="header-container">
                                         <div class="text-container">
@@ -315,12 +409,15 @@
                                         </div>
                                 </div>
                           </div> -->
+                          
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div id="request-demo"></div>
+                        <div class="swiper-pagination" ></div>
                       </div>
+                     
         </section>
-
-        <section class="contact-sales-section">
+       
+        <section class="contact-sales-section" >
                 <!-- <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                 data-aos-duration="1000">
@@ -335,7 +432,7 @@
                                 <ion-icon name="call" ></ion-icon>
                                 <h4>+91 80 4814 7467</h4>
                         </div>
-                        <div class="cards" style="padding-top:20px">
+                        <div class="cards" style="padding-top:20px" >
                                 <p>Ask for a Demo</p>
                                 <ion-icon name="help-circle"></ion-icon>
                                 <button data-bs-toggle="modal" data-bs-target="#exampleModal" >Book Now</button>
@@ -352,38 +449,52 @@
                     <form class="row g-2">
 
                             <div class="col-4">
-                                    <img src="/resources/img/timing.png" width="380px" height="380px" style="margin-top:43px ;">
+                                    <img src="/resources/img/Schedule-demo.png" width="380px" height="380px" style="margin-top:43px ;">
                             </div>
                             <div class="col-md-8">
+
                             <div class="row g-5 p-3">
-                        <div class="col-md-6 ">
-                          <label for="inputEmail4"  class="form-label">Contact Person:</label>
-                          <input type="text" required class="form-control" id="inputEmail4">
+                        <div class="col-md-12 ">
+                          <input type="text" placeholder="*Person Name" required class="form-control" id="inputEmail4">
                         </div>
-                        <div class="col-md-6">
-                            <label for="inputEmail4"  class="form-label">Email:</label>
-                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"  required class="form-control" id="inputEmail4">
-                          </div>
                         </div>
-                        <div class="row g-5 p-3">
-                        <div class="col-md-6">
-                            <label for="inputEmail4"  class="form-label">Phone Number:</label>
-                            <input type="tel"  maxlength="10" required class="form-control" id="inputEmail4">
-                          </div>
-                          <div class="col-md-6">
+
+                     <!--    <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">Company Name:</label>
                             <input type="text" required class="form-control" id="inputPassword4">
                           </div>
+                        
+                        -->
+
+                        <div class="row g-5 p-3">
+                                <div class="col-md-6">
+                                        <input type="email" placeholder="*Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"  required class="form-control" id="inputEmail4">
+                                      </div>
+                        <div class="col-md-6">
+                            <input type="tel" placeholder="*Phone" maxlength="10" required class="form-control" id="inputEmail4">
+                          </div>
                         </div>
+
+                        <div class="row g-5 p-3">
+                                <div class="col-md-12">
+                                        <input type="text" placeholder="Company Name" class="form-control" id="inputPassword4">
+                                      </div>
+                                </div>
+
+
+                                <div class="row g-5 p-3">
+                                        <div class="col-md-12">
+                                                <input type="text" placeholder="Demo Date & Time" class="form-control" onfocus="this.type='datetime-local'" id="inputPassword4" onblur="if(this.value==='')this.type='text'">
+                                               
+                                              </div>
+                                        </div>
+
+
                         <div class="row g-5 p-3">
                           <div class="col-md-6">
-                            <label for="inputEmail4"  class="form-label">Demo Date:</label>
-                            <input type="date" required class="form-control" id="inputEmail4">
-                          </div>
-                          <div class="col-md-6">
-                            <label for="inputState" class="form-label ">Products:</label>
-                            <select class="form-select multiple" id="specificSizeSelect" >
-                                <option selected></option>
+                            
+                            <select class="form-select multiple"  id="specificSizeSelect" >
+                                <option selected >Products</option>
                                 <option value="1">SoftPhone</option>
                                 <option value="2">IP Phones</option>
                                 <option value="3">IP PBX</option>
@@ -397,12 +508,11 @@
                                 <option value="11">SIP Door Phones</option>
                               </select>
                           </div>
-                        </div>
-                        <div class="row g-5 p-3">
+        
                           <div class="col-md-6">
-                            <label for="inputState" class="form-label ">Services:</label>
+        
                             <select class="form-select multiple" id="specificSizeSelect" >
-                                <option selected></option>
+                                <option selected>Services</option>
                                 <option value="1">Contact Center Solution</option>
                                 <option value="2">Call Center Dialer</option>
                                 <option value="3">International Unlimited Plans</option>
@@ -412,17 +522,25 @@
                                 <option value="7">Hosted IVR</option>
                               </select>
                           </div>
-                          <div class="col-md-6">
-                            <label for="exampleFormControlTextarea1"  class="form-label">Comments:</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                          </div>
+
+                        <div class="row g-5 p-3">
+                          <div class="col-md-12">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Comments" rows="3"></textarea>
                           </div>
                         </div>
                 </div>
                     </form>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="modal-content pt-3 pb-3">
+                    <div class="row">
+                            <div class="col-md-10">
+              <h6 class="d-flex " style="padding-left:30px ; padding-top:15px">Lorem ipsum dolor sit amet consectetur.</h6>
+        </div>
+        <div class="col-md-2">
               <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+        </div>
             </div>
           </div>
         </div>
@@ -506,12 +624,12 @@
                                         </p>
                                 </div>
                         </div>
-                        <div class="maps">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7711229101865!2d77.64913741482152!3d12.922426790888139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae148051854383%3A0x78f1306c68234079!2s2%2C%2027th%20Main%20Rd%2C%20Phase%203%2C%20Agara%20Village%2C%201st%20Sector%2C%20HSR%20Layout%2C%20Bengaluru%2C%20Karnataka%20560102!5e0!3m2!1sen!2sin!4v1651526015264!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        <div class="maps" >
+                                <iframe style="height:500px ;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7711229101865!2d77.64913741482152!3d12.922426790888139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae148051854383%3A0x78f1306c68234079!2s2%2C%2027th%20Main%20Rd%2C%20Phase%203%2C%20Agara%20Village%2C%201st%20Sector%2C%20HSR%20Layout%2C%20Bengaluru%2C%20Karnataka%20560102!5e0!3m2!1sen!2sin!4v1651526015264!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                                 </iframe>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2674.4684304153348!2d73.77927658780716!3d18.561925951943074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2becc3f6efc39%3A0xbcf1eb0f41a641c8!2sRegus%20-%20Pune%2C%20Baner!5e0!3m2!1sen!2sin!4v1652771195902!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10975.661943916666!2d72.85706015734328!3d19.10713223297693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8397c29f719%3A0x9c2190da711c19e4!2sRegus%20-%20Mumbai%20Andheri%20Kurla!5e0!3m2!1sen!2sin!4v1652771307792!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4033.0573144322348!2d78.45236751357304!3d17.426260059757144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90b4bf74f08f%3A0x411a9feca65bb999!2sThe%20Belvedere!5e0!3m2!1sen!2sin!4v1652771354024!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe style="height:500px ;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2674.4684304153348!2d73.77927658780716!3d18.561925951943074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2becc3f6efc39%3A0xbcf1eb0f41a641c8!2sRegus%20-%20Pune%2C%20Baner!5e0!3m2!1sen!2sin!4v1652771195902!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe style="height:500px ;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10975.661943916666!2d72.85706015734328!3d19.10713223297693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8397c29f719%3A0x9c2190da711c19e4!2sRegus%20-%20Mumbai%20Andheri%20Kurla!5e0!3m2!1sen!2sin!4v1652771307792!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe style="height:500px ;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4033.0573144322348!2d78.45236751357304!3d17.426260059757144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90b4bf74f08f%3A0x411a9feca65bb999!2sThe%20Belvedere!5e0!3m2!1sen!2sin!4v1652771354024!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                 </div>
         </section>

@@ -28,6 +28,104 @@
         <!-- Swiper JS -->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
+
+        <style>
+
+header nav ul li .nav-items .company-content {
+  width: 300px;
+  margin: 0 15px;
+}
+
+header nav ul li .nav-items .company-content p {
+  font-size: 0.9rem;
+}
+
+header nav ul li .nav-items .company-content img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 662px) {
+  header nav ul li .nav-items {
+    width: 100%;
+    max-width: 600px;
+    top: 150%;
+    left: 0%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+            box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+    padding: 20px;
+    visibility: collapse;
+    background-color: #fff;
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header nav ul li .nav-items .items-content {
+    width: 400px;
+    margin: 0 15px;
+  }
+  header nav ul li .nav-items .items-content .heading {
+    display: none;
+    margin-bottom: 20px;
+  }
+  header nav ul li .nav-items .items-content .heading p {
+    font-size: 0.9rem;
+    color: rgba(25, 26, 25, 0.9);
+  }
+  header nav ul li .nav-items .items-content .links .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 10px 0;
+  }
+  header nav ul li .nav-items .items-content .links .link img {
+    width: 35px;
+    height: 35px;
+    margin: 0px 10px;
+  }
+  header nav ul li .nav-items .items-content .links .link .text-content a {
+    font-weight: 600;
+  }
+  header nav ul li .nav-items .items-content .links .link .text-content p {
+    display: none;
+    font-size: 0.7rem;
+    color: rgba(25, 26, 25, 0.95);
+  }
+  header nav ul li .nav-items .company-content {
+    display: none;
+    width: 300px;
+    margin: 0 15px;
+  }
+  header nav ul li .nav-items .company-content p {
+    font-size: 0.9rem;
+  }
+  header nav ul li .nav-items .company-content img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.benefit-business-contain-section {
+  background-color: #BDF3F4;
+  padding: 0px 0;
+  overflow-x: visible;
+}
+        </style>
 </head>
 <body>
         <section class="head-section">
@@ -105,7 +203,7 @@
                                                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
                                                                             Aliquam tempus nibh eros, ac consequat nisl condimentum non.
                                                                     </p>
-                                                                    <img src="../../resources/img/logo.png" alt="">
+                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="160px" max-width="100%" alt="">
                                                             </div>
                                                     </div>
                                             </li>
@@ -181,7 +279,7 @@
                                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
                                                                     Aliquam tempus nibh eros, ac consequat nisl condimentum non.
                                                             </p>
-                                                            <img src="../../resources/img/logo.png" alt="">
+                                                            <img src="../../resources/img/image-in-the-place-logo.png" alt="">
                                                     </div>
                                             </div>
                                             </li>
@@ -282,12 +380,12 @@
                           <div class="swiper-slide">
                                 <div class="header-container">
                                         <div class="text-container">
-                                                <span>Home > Solution > Industrial Distribution</span>
+                                                <span><a href="/index.html" style="text-decoration-line:none ;" > Home</a> > <a href="/pages/solutions/professional-services.html" style="text-decoration-line:none ;" > Solutions</a> > Industrial Distribution</span>
                                                 <h2>Communication Solutions for <br> Industrial/Distribution Sector </h2>
                                                 <p>Using Bridgei2p services, your teams have the communication tools they need to keep supplies flowing at the pace of customer expectations.</p>
                                                 <div class="btn-container">
-                                                        <button>Enquiry Now</button>
-                                                        <button>Play Video<ion-icon name="play"></ion-icon></button>
+                                                        <button><a href="/pages/contact-us.html">Enquiry Now</a></button>
+                                                        <button><a href="/pages/contact-us.html">Get Quote</a></button>
                                                 </div>
                                         </div>
                                         <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"  
@@ -440,7 +538,7 @@
                         <h3 style="font-size: clamp(1.3rem, 4vw, 1.8rem); max-width: 1000px; ">
                                 Partner with us and we’ll help you develop a personalized solution and discuss specific telecommunications alternatives with you.
                         </h3>
-                        <a href="./contact-us.html">Request a demo</a>
+                        <a href="/pages/contact-us.html#request-demo">Request a demo</a>
                 </div>
         </section>   
 
@@ -490,7 +588,7 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Autem ut vel eum sed eaque dicta accusamus nobis, exercitationem officia accusantium impedit praesentium unde minus aliquid, facilis voluptatibus. Eius, nihil itaque?
                         </p>
-                        <a href="#">See all customer stories</a>
+                        <a href="/index.html#comments">See all customer stories</a>
                 </div>
                 <!-- <button>View More</button> -->
         </section>
