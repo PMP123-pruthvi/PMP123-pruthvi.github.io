@@ -131,6 +131,108 @@ header nav ul li .nav-items .company-content img {
   background-color: white;
 }
 
+/*features*/
+
+.features-section {
+  padding: 40px 0;
+}
+
+.features-section .section-heading {
+  width: 94%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.features-section .section-heading h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+.features-section .section-heading p {
+  font-size: 1.2rem;
+}
+
+.features-section .features {
+  width: 94%;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-top: -50px;
+}
+
+@media (max-width: 1100px) {
+  .features-section .features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.features-section .features .features-card {
+  text-align: center;
+  margin: 20px 10px;
+  max-width: 600px;
+  padding:25px;
+  height: 300px;
+  border-radius: 7px;
+  background-color: #f4f4f4;
+}
+
+.features-section .features .features-card img {
+  width: 100px;
+  margin: 10px auto;
+}
+
+.features-section .features .features-card h3 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.features-section .features .features-card p {
+  text-align: center;
+  max-width: 300px;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+.features-section .features .features-card .full-content {
+  display: none;
+}
+
+.features-section .features .features-card button {
+  padding: 12px 35px;
+  margin: 30px auto;
+  background-color: #FF8303;
+  color: #fafafa;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features-section .features .features-card button:hover {
+  background-color: rgba(255, 131, 3, 0.8);
+}
+
+
 
         </style>
 
@@ -459,95 +561,43 @@ header nav ul li .nav-items .company-content img {
                                 Businesses are constantly evolving. A current and prevalent scenario is the need to be reachable from anywhere and allow your team members to communicate from multiple locations. VoIP solution from Bridgei2p is tailored to your needs.
                         </p>
                 </div>
-                <div class="market-layout"  data-aos="fade-up" data-aos-easing="linear"  
+              
+        </section>
+
+
+        <section class="features-section">
+                <div class="features-layout"  data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
-                data-aos-duration="1500">
-                        <div class="market-posts">
-                                <h3 class="heading">Boost Productivity</h3>
-                                <div class="img-container">
-                                        <img src="./resources/img/boost-productivity.png" alt="">
-                                        <div class="content">
-                                                <div class="text-content">
-                                                        <br>
-                                                        <p>
-                                                                Connect desk phones, mobile phones, PCs, and a CRM system into one network to unify communications.
-                                                        </p>
-                                                        <!-- <a href="#">Read More</a> -->
-                                                </div>
-                                        </div>
+                data-aos-duration="1000">
+                        <div class="features">
+                                <div class="features-card" >
+                                        <img src="/resources/img/3064836.png" alt="">
+                                        <h3>Boost Productivity</h3>
+                                        <p class="half-content">
+                                                Connect desk phones, mobile phones, PCs, and a CRM system into one network to unify communications.
+                                        </p>
+                                       
                                 </div>
-                                <div class="text-content">
-                                        <!-- <span>By <b>Abdullah</b> | 10 April 2022</span> -->
-                                        <!-- <h3>Increasing Prosperity with Positive Thinking</h3> -->
+                                <div class="features-card" >
+                                        <img src="/resources/img/2936758.png" alt="" >
+                                        <h3>Cost-Effective</h3>
+                                        <p class="half-content">
+                                                Eliminate the need for server rooms or outdated office equipments.
+                                        </p>
+                        
                                 </div>
-                        </div>
-                        <div class="market-posts">
-                                <h3 class="heading">Cost-Effective</h3>
-                                <div class="img-container">
-                                        <img src="./resources/img/cost-effective.png" alt="">
-                                        <div class="content">
-                                                <div class="text-content">
-                                                        <br>
-                                                        <p>
-                                                                Eliminate the need for server rooms or outdated office equipments.
-                                                        </p>
-                                                        <!-- <a href="#">Read More</a> -->
-                                                </div>
-                                        </div>
+                                <div class="features-card" >
+                                        <img src="/resources/img/2706950.png" alt="">
+                                        <h3>Great Customer Service</h3>
+                                        <p class="half-content">
+                                                With smart routing and a virtual assistant, you can reduce hold times and direct calls to the appropriate team member.
+                                        </p>
+                                        
                                 </div>
-                                <div class="text-content">
-                                        <!-- <span>By <b>Abdullah</b> | 10 April 2022</span> -->
-                                        <!-- <h3>Increasing Prosperity with Positive Thinking</h3> -->
-                                </div>
-                        </div>
-                        <div class="market-posts">
-                                <h3 class="heading">Great Customer Service</h3>
-                                <div class="img-container">
-                                        <img src="./resources/img/customer-serivce.png" alt="" style="opacity: 0.8;">
-                                        <div class="content">
-                                                <div class="text-content">
-                                                        <br>
-                                                        <p>
-                                                                With smart routing and a virtual assistant, you can reduce hold times and direct calls to the appropriate team member.
-                                                        </p>
-                                                        <!-- <a href="#">Read More</a> -->
-                                                </div>
-                                        </div>
-                                </div>
-                                <div class="text-content">
-                                        <!-- <span>By <b>Abdullah</b> | 10 April 2022</span> -->
-                                        <!-- <h3>Great Customer Service</h3> -->
-                                </div>
-                        </div>
-                        <!-- <div class="market-posts">
-                                <div class="img-container">
-                                        <img src="./resources/img/blog-image.png" alt="">
-                                </div>
-                                <div class="text-content">
-                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
-                                        <h3>Increasing Prosperity with Positive Thinking</h3>
-                                </div>
-                        </div>
-                        <div class="market-posts">
-                                <div class="img-container">
-                                        <img src="./resources/img/blog-image-2.png" alt="">
-                                </div>
-                                <div class="text-content">
-                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
-                                        <h3>Increasing Prosperity with Positive Thinking</h3>
-                                </div>
-                        </div>
-                        <div class="market-posts">
-                                <div class="img-container">
-                                        <img src="./resources/img/blog-image-3.png" alt="">
-                                </div>
-                                <div class="text-content">
-                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
-                                        <h3>Increasing Prosperity with Positive Thinking</h3>
-                                </div>
-                        </div> -->
+                </div>
                 </div>
         </section>
+
         <section class="quote-section">
                 <h1>Unified Communication Suite to Help Your Team Connect, Collaborate, And Work from Anywhere.</h1>
         </section>
