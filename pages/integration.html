@@ -31,6 +31,13 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
 
         <style>
+ .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f2f2f2; 
+}
 header nav ul li .nav-items {
   max-width: 800px;
   position: absolute;
@@ -253,7 +260,7 @@ header nav ul li .nav-items .company-content img {
                                                 <a   id="products" href="#" class="nav-item" >
                                                     Products<ion-icon  onclick="productMenu"    name="arrow-down-circle-outline"></ion-icon>
                                             </a>
-                                                    <div id="product-items" class="nav-items">
+                                                    <div id="product-items" class="nav-items" style="max-width: 700px;">
                                                             <div class="items-content">
                                                                     <div id="heading" class="heading">
                                                                             <h3>Bridgei2p</h3>
@@ -297,7 +304,7 @@ header nav ul li .nav-items .company-content img {
                                                                         Bridgei2p provides all of the contemporary capabilities at a reasonable price for all business types. 
                                                                         You can take your company to the next level in a matter of minutes.
                                                                 </p>
-                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="165px" max-width="100%" alt="">
+                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="150px" max-width="100%" alt="">
                                                             </div>
                                                     </div>
                                             </li>
