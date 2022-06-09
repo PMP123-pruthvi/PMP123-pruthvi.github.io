@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bridge Ip2</title>
         <link rel="stylesheet" href="../resources/styles/product.css">
+        <link rel="stylesheet" href="/css/test.css">
         <script src="../resources/scripts/script.js" defer></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <!-- AOS -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -30,6 +32,30 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
         
         <style>
+
+header nav ul li .nav-items {
+  max-width: 800px;
+  position: absolute;
+  top: 160%;
+  left: -300px;
+  z-index: 10000;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+          box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+  padding: 20px;
+  visibility: collapse;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 
 header nav ul li .nav-items .company-content {
   width: 300px;
@@ -133,8 +159,81 @@ header nav ul li .nav-items .company-content img {
   margin: -5.5px;
 }
 
+/*top button */
+#button1 {
+  display: inline-block;
+  background-color: #FF8303;
+  width: 50px;
+  height: 50px;
+  
+  text-align: center;
+  border-radius:50%;
+  position: fixed;
+  bottom: 30px;
+  right: 1px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button1::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.3em;
+  line-height: 50px;
+  color: #fff;
+}
+#button1:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button1:active {
+  background-color: #555;
+}
+#button1.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+
+@media (min-width: 500px) {
+  
+  #button1 {
+    margin: 30px;
+  }
+}
+
         </style>
 <body>
+
+         <!--top button-->
+
+      <a id="button1"></a>
+
+      <script>
+        var btn = $('#button1');
+      
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+          btn.addClass('show');
+        } else {
+          btn.removeClass('show');
+        }
+      });
+      
+      btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+      });
+      
+      </script>
+
+      
         <section class="head-section">
                 <header  id="header">
                         <!-- <div class="user-acc">
@@ -171,124 +270,127 @@ header nav ul li .nav-items .company-content img {
                                                             <div class="items-content">
                                                                     <div id="heading" class="heading">
                                                                             <h3>Bridge I2P</h3>
-                                                                            <p>
-                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                            </p>
+                                                                            <p style="font-size:13px ; color:black;">
+                                                                                Switch to a dependable VoIP unified communication solution for your business to simplify your communications and take your company to greater heights with advanced features.
+                                                                        </p>
                                                                     </div>
                                                                     <div id="links" class="links">
                                                                             <div class="link">
                                                                                     <img src="../resources/img/Products Icons/icons_Business Phone System.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="./products.html">Business Phone System</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Simplify Business Communication With A Dynamic Cloud-based VoIP PBXware Telephony Platform.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                             <div class="link">
                                                                                     <img src="../resources/img/Products Icons/icons_Contact Center.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="./contact.html">Cloud Contact Centre</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Connect And Work With Agents Using A Comprehensive And Secure Cloud Telephony Solution.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                             <div class="link">
                                                                                     <img src="../resources/img/Products Icons/icons_IVR broadcasting.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="./IVRBroadcast.html">IVR Broadcasting</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Customize An Audio Message And Incorporate It in Your Company Requirements.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                     </div>
                                                             </div>
                                                             <div id="company-content" class="company-content">
-                                                                    <p>
-                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                            Aliquam tempus nibh eros, ac consequat nisl condimentum non.
-                                                                    </p>
-                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="160px" max-width="100%" alt="">
+                                                                <p style="font-size:13px ;">
+                                                                        Are you looking for a corporate communications solution that will allow you to stay connected from any location and on any device? 
+                                                                        Bridgei2p provides all of the contemporary capabilities at a reasonable price for all business types. 
+                                                                        You can take your company to the next level in a matter of minutes.
+                                                                </p>
+                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="165px" max-width="100%" alt="">
                                                             </div>
                                                     </div>
                                             </li>
                                         <li id="solution-parent">
                                                 <a id="solutions" href="#">Solutions<ion-icon id="solution-icon" name="arrow-down-circle-outline"></ion-icon></a>
                                                 <div id="solution-items" class="nav-items">
-                                                    <div id="items-content" class="items-content">
-                                                            <div class="heading">
-                                                                    <h3>Bridge I2P</h3>
-                                                                    <p>
-                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                    </p>
-                                                            </div>
-                                                            <div class="links">
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_Professional services.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/professional-services.html">Professional Services</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_Call Center.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/call-center.html">Call Center</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_health.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/health.html">Healthcare</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_Retail.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/retail.html">Retail</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_financial .svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/financial.html">Financial Services</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_Industrial & Distribution.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/industrial-distribution.html">Industrial/Distribution</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                            </div>
-                                                    </div>
-                                                    <div class="company-content">
-                                                            <p>
-                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                    Aliquam tempus nibh eros, ac consequat nisl condimentum non.
-                                                            </p>
-                                                            <img src="../resources/img/image-in-the-place-logo.png" alt="">
-                                                    </div>
-                                            </div>
+                                                        <div id="items-content" class="items-content">
+                                                                <div class="heading">
+                                                                        <h3>Bridgei2p</h3>
+                                                                        <p style="font-size:13px ; color:black;">
+                                                                            An all-in-one cloud solution for all your business needs. Discover advanced cloud computing services all in a single platform.
+                                                                        </p>
+                                                                </div>
+                                                                <div class="links">
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_Professional services.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/professional-services.html">Professional Services</a>
+                                                                                        <p>
+                                                                                            See why professionals need a comprehensive platform to get more done with all the communication tools.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_Call Center.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/call-center.html">Call Center</a>
+                                                                                        <p>
+                                                                                            Prioritize customers and understand their challenges using effective call campaigns.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_health.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/health.html">Healthcare</a>
+                                                                                        <p>
+                                                                                            Enable healthcare professionals to build an excellent rapport with patients, in real-time.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_Retail.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/retail.html">Retail</a>
+                                                                                        <p>
+                                                                                            One stop-shop to deliver exceptional services through a diverse array of channels.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_financial .svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/financial.html">Financial Services</a>
+                                                                                        <p>
+                                                                                            Offer a security-oriented and reliable client experience on any device.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_Industrial & Distribution.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/industrial-distribution.html">Industrial/Distribution</a>
+                                                                                        <p>
+                                                                                            An all-in-one cloud powered solution that aids in maximizing service quality.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="company-content">
+                                                                <p style="font-size:13px ;">
+                                                                    By industry or business requirement, find smart solutions for your company. Bridgei2p helps you explore exceptional 
+                                                                    services that improve customer satisfaction and maximize efficiency across a wide variety of channels. 
+                                                                    You can drive guaranteed success through our cloud powered technology.
+                                                                </p>
+                                                                <img src="../resources/img/image-in-the-place-logo.png" alt="" height="400px">
+                                                        </div>
+                                                </div>
+    
                                             </li>
                                     <li><a href="./integration.html">Integrations</a></li>
                                     <!-- <li><a href="#">Plans & Pricing</a></li> -->
@@ -387,8 +489,8 @@ header nav ul li .nav-items .company-content img {
                                                 <h2>Target Maximum Customers <br> at Your Fingertips</h2>
                                                 <!-- <p style="font-size: 1.2rem; font-weight:600;">Revolutionize. Reconnect. Anywhere. Anytime.
                                                         Never Miss a Business Lead & Work Smart with VoIP.</p> -->
-                                                        <p>Lot More Than a Powerful Communication System.
-                                                                Perfectly consistent, coherent and absolutely instinctive.</p>
+                                                        <p>Lot More Than a Powerful Communication System.</p>
+                                                           <p>     Perfectly consistent, coherent and absolutely instinctive.</p>
                                                                 
                                                 <div class="btn-container">
                                                         <button><a href="/pages/contact-us.html"> Start Free Trial</a></button>
@@ -475,7 +577,7 @@ header nav ul li .nav-items .company-content img {
                                         <!-- <div class="text-content">
                                                 <h4>Business FAQs</h4>
                                                 <p>
-                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                         <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                                 </p>
                                         </div>
@@ -489,7 +591,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Business Pricing</h4>
                                                 <p>
-                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                         <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud. <br>
                                                 </p>
                                         </div>
@@ -544,7 +646,7 @@ header nav ul li .nav-items .company-content img {
                 data-aos-once="true"
                         data-aos-duration="1000">
                                 <h3>
-                                        When Your Company Faces Unique Challenges, And We Have the Expertise To Address Them.
+                                        When Your Company Faces Unique Challenges, We Have the Expertise To Address Them.
                                         We Listen, You Communicate.
                                 </h3>
                                 <!-- <button>See Pricing</button> -->
@@ -559,61 +661,51 @@ header nav ul li .nav-items .company-content img {
                         <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <div class="accordation">
-                                        <h3>How does voice broadcasting work?</h3>
-                                        <ion-icon name="add" class="add-btn" ></ion-icon>
+                        <div class="accordion">
+                                <div class="accordion-item">
+                                  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How does voice broadcasting work?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        To start a voice broadcasting campaign, just register as a client and complete these simple steps:
+                              </p>
+                              <ul style="margin-top: -10px;">
+                                      <li>Upload phone numbers of recipients to our protected website.</li>
+                                      <li>Make audio recordings of your outgoing messages by dialing the toll-free number provided.</li>
+                                      <li>Start calling from the website or a toll-free number (premium option). The number and length of phone listings you offer are unrestricted. Lists should be in a.csv format (a common Excel text format). If you wish, we may record your messages professionally.</li>
+                                      <li>The phone systems start making calls as soon as you start the voice broadcast campaign. Your message is played if someone answers the phone (or if our phone system detects an answering machine). If your call is not answered, the phone system will attempt thrice to relay your message later.</li>
+                              </ul>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>To start a voice broadcasting campaign, just register as a client and complete these simple steps:</p>
-                                        <ul>
-                                                <li>Upload phone numbers of recipients to our protected website.</li>
-                                                <li>Make audio recordings of your outgoing messages by dialing the toll-free number provided.</li>
-                                                <li>Start calling from the website or a toll-free number (premium option). The number and length of phone listings you offer are unrestricted. Lists should be in a.csv format (a common Excel text format). If you wish, we may record your messages professionally.</li>
-                                                <li>The phone systems start making calls as soon as you start the voice broadcast campaign. Your message is played if someone answers the phone (or if our phone system detects an answering machine). If your call is not answered, the phone system will attempt thrice to relay your message later.</li>
-                                        </ul>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">What are the uses of voice broadcasting?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        Voice broadcasting is a method of mass communication that allows users to deliver automated voice messages to a large number of people at once via a phone call. It may be used to conduct surveys, 
+                                        issue event invites, send reminders or notifications, and make crucial company announcements, among other things.
+                              </p>
+                                  </div>
                                 </div>
-                                
-        
-                                <div class="accordation">
-                                        <h3>What are the uses of voice broadcasting?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Is voice broadcasting legal?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                   <p>In India, voice broadcasting is a highly effective marketing method that is completely legal. Most nations have rules that make voice broadcasting permissible; nonetheless, it's best to double-check with your service provider for total clarity.</p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                Voice broadcasting is a method of mass communication that allows users to deliver automated voice messages to a large number of people at once via a phone call. It may be used to conduct surveys, issue event invites, send reminders or notifications, and make crucial company announcements, among other things.
-                                        </p>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does voice broadcasting cost?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        Bridgei2p offers low-cost voice broadcasting services by costing just <span style="color:#FF8303">Rs. 1800</span> per call on voice broadcasting rates.
+                              </p>
+                                  </div>
                                 </div>
-
-                                <div class="accordation">
-                                        <h3>Is voice broadcasting legal?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Can my voice broadcast campaign be customized?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>Yes, Bridgei2p is a company that specializes in the creation of customized calling campaigns. Inbound IVR (Interactive Speech Response) call answering services and outbound voice broadcasting are examples of these services. Bridgei2p has a dedicated team of call processing developers that can assess your needs and create a unique campaign for you in just a few hours!</p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                In India, voice broadcasting is a highly effective marketing method that is completely legal. Most nations have rules that make voice broadcasting permissible; nonetheless, it's best to double-check with your service provider for total clarity.
-                                        </p>
-                                </div>
-
-                                <div class="accordation">
-                                        <h3>How much does voice broadcasting cost?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>
-                                                Bridgei2p offers low-cost voice broadcasting services by costing just Rs. XYZ per call on voice broadcasting rates.
-                                        </p>
-                                </div>
-
-                                <div class="accordation">
-                                        <h3>Can my voice broadcast campaign be customized?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>
-                                                Yes, Bridgei2p is a company that specializes in the creation of customized calling campaigns. Inbound IVR (Interactive Speech Response) call answering services and outbound voice broadcasting are examples of these services. Bridgei2p has a dedicated team of call processing developers that can assess your needs and create a unique campaign for you in just a few hours!
-                                        </p>
-                                </div>
-
+                              </div>
                         </div>
                 </section>
         </section>
@@ -649,7 +741,7 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                                         <div class="text-content">
                                                 <h4>Database creation</h4>
                                                 <p>
-                                                        This contains the call receivers' phone numbers and information. In a matter of seconds, you'll be able to import all of your phone numbers. All of your contacts will be filtered, and duplicate and invalid numbers will be removed automatically by the Smart system
+                                                        This contains the call receiver's phone numbers and information. In a matter of seconds, you'll be able to import all of your phone numbers. All of your contacts will be filtered, and duplicate and invalid numbers will be removed automatically by the Smart system.
                                                 </p>
                                         </div>
                                 </div>
@@ -747,7 +839,7 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                                                 <h4>Integrates with Your CRM</h4>
                                                 <p>
                                                         Your existing CRM software will connect with the voice broadcasting software. You may immediately enter replies into the CRM and upload information from the CRM into the system.
-                                                        <span>Know more about <a href="#">CRM</a> and its importance</span>
+                                                        <span>Know more about <a href="./integration.html">CRM</a> and its importance</span>
                                                 </p>
                                         </div>
                                         <div class="img-container">
@@ -761,14 +853,14 @@ It creates a win-win situation for both business owners and clients. We, at Brid
 
                 <section class="linked-section">
                         <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  
-                data-aos-once="true"
+                        data-aos-once="true"
                         data-aos-duration="1000">
-                                <h3>
+                                <h3 style="font-size: clamp(1.3rem, 4vw, 1.8rem); max-width: 1000px; ">
                                         To learn more, schedule a free consultation with one of our VoIP experts.
                                 </h3>
-                                <a href="./contact-us.html">Schedule a Call</a>
+                                <a href="/pages/contact-us.html#request-demo">Schedule a Call</a>
                         </div>
-                </section>
+                </section> 
 
                 <section class="faq-section">
                         <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
@@ -779,61 +871,51 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                         <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <div class="accordation">
-                                        <h3>How does voice broadcasting work?</h3>
-                                        <ion-icon name="add" class="add-btn" ></ion-icon>
+                        <div class="accordion">
+                                <div class="accordion-item">
+                                  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How does voice broadcasting work?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        To start a voice broadcasting campaign, just register as a client and complete these simple steps:
+                              </p>
+                              <ul style="margin-top: -10px;">
+                                      <li>Upload phone numbers of recipients to our protected website.</li>
+                                      <li>Make audio recordings of your outgoing messages by dialing the toll-free number provided.</li>
+                                      <li>Start calling from the website or a toll-free number (premium option). The number and length of phone listings you offer are unrestricted. Lists should be in a.csv format (a common Excel text format). If you wish, we may record your messages professionally.</li>
+                                      <li>The phone systems start making calls as soon as you start the voice broadcast campaign. Your message is played if someone answers the phone (or if our phone system detects an answering machine). If your call is not answered, the phone system will attempt thrice to relay your message later.</li>
+                              </ul>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>To start a voice broadcasting campaign, just register as a client and complete these simple steps:</p>
-                                        <ul>
-                                                <li>Upload phone numbers of recipients to our protected website.</li>
-                                                <li>Make audio recordings of your outgoing messages by dialing the toll-free number provided.</li>
-                                                <li>Start calling from the website or a toll-free number (premium option). The number and length of phone listings you offer are unrestricted. Lists should be in a.csv format (a common Excel text format). If you wish, we may record your messages professionally.</li>
-                                                <li>The phone systems start making calls as soon as you start the voice broadcast campaign. Your message is played if someone answers the phone (or if our phone system detects an answering machine). If your call is not answered, the phone system will attempt thrice to relay your message later.</li>
-                                        </ul>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">What are the uses of voice broadcasting?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        Voice broadcasting is a method of mass communication that allows users to deliver automated voice messages to a large number of people at once via a phone call. It may be used to conduct surveys, 
+                                        issue event invites, send reminders or notifications, and make crucial company announcements, among other things.
+                              </p>
+                                  </div>
                                 </div>
-                                
-        
-                                <div class="accordation">
-                                        <h3>What are the uses of voice broadcasting?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Is voice broadcasting legal?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                   <p>In India, voice broadcasting is a highly effective marketing method that is completely legal. Most nations have rules that make voice broadcasting permissible; nonetheless, it's best to double-check with your service provider for total clarity.</p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                Voice broadcasting is a method of mass communication that allows users to deliver automated voice messages to a large number of people at once via a phone call. It may be used to conduct surveys, issue event invites, send reminders or notifications, and make crucial company announcements, among other things.
-                                        </p>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does voice broadcasting cost?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        Bridgei2p offers low-cost voice broadcasting services by costing just <span style="color:#FF8303">Rs. 1800</span> per call on voice broadcasting rates.
+                              </p>
+                                  </div>
                                 </div>
-
-                                <div class="accordation">
-                                        <h3>Is voice broadcasting legal?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Can my voice broadcast campaign be customized?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>Yes, Bridgei2p is a company that specializes in the creation of customized calling campaigns. Inbound IVR (Interactive Speech Response) call answering services and outbound voice broadcasting are examples of these services. Bridgei2p has a dedicated team of call processing developers that can assess your needs and create a unique campaign for you in just a few hours!</p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                In India, voice broadcasting is a highly effective marketing method that is completely legal. Most nations have rules that make voice broadcasting permissible; nonetheless, it's best to double-check with your service provider for total clarity.
-                                        </p>
-                                </div>
-
-                                <div class="accordation">
-                                        <h3>How much does voice broadcasting cost?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>
-                                                Bridgei2p offers low-cost voice broadcasting services by costing just Rs. XYZ per call on voice broadcasting rates.
-                                        </p>
-                                </div>
-
-                                <div class="accordation">
-                                        <h3>Can my voice broadcast campaign be customized?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>
-                                                Yes, Bridgei2p is a company that specializes in the creation of customized calling campaigns. Inbound IVR (Interactive Speech Response) call answering services and outbound voice broadcasting are examples of these services. Bridgei2p has a dedicated team of call processing developers that can assess your needs and create a unique campaign for you in just a few hours!
-                                        </p>
-                                </div>
-
+                              </div>
                         </div>
                 </section>
         </section>
@@ -849,7 +931,7 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                                 <div class="text-content">
                                         <h3>REASONS WHY BUSINESSES NEED VOICE BROADCASTING SYSTEM </h3>
                                         <!-- <p>
-                                                PBXware's Business Edition is a complete and fully configurable VoIP solution that provides you with a full range of corporate phone system features and capabilities. Each edition of Business PBX supports unique features that maximize performance, reliability, and expandability, allowing you to revolutionize the way you do business and boost workplace productivity.
+                                                PBX Business Edition is a complete and fully configurable VoIP solution that provides you with a full range of corporate phone system features and capabilities. Each edition of Business PBX supports unique features that maximize performance, reliability, and expandability, allowing you to revolutionize the way you do business and boost workplace productivity.
                                                 With unique deployment choices ranging from on-premise softswitch deployments based on customized units and custom hardware to Hosted PBX systems serviced via SERVERware in the Cloud, it offers greater flexibility and customization potential, giving you more control over the end result.        
                                         </p> -->
                                 </div>
@@ -1042,14 +1124,14 @@ It creates a win-win situation for both business owners and clients. We, at Brid
 
                 <section class="linked-section">
                         <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  
-                data-aos-once="true"
+                        data-aos-once="true"
                         data-aos-duration="1000">
-                                <h3>
+                                <h3 style="font-size: clamp(1.3rem, 4vw, 1.8rem); max-width: 1000px; ">
                                         To learn more, schedule a free consultation with one of our VoIP experts.
                                 </h3>
-                                <a href="./contact-us.html">Schedule a Call</a>
+                                <a href="/pages/contact-us.html#request-demo">Schedule a Call</a>
                         </div>
-                </section>
+                </section> 
 
                 <section class="faq-section">
                         <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
@@ -1060,63 +1142,54 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                         <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <div class="accordation">
-                                        <h3>How does voice broadcasting work?</h3>
-                                        <ion-icon name="add" class="add-btn" ></ion-icon>
+                        <div class="accordion">
+                                <div class="accordion-item">
+                                  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How does voice broadcasting work?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        To start a voice broadcasting campaign, just register as a client and complete these simple steps:
+                              </p>
+                              <ul style="margin-top: -10px;">
+                                      <li>Upload phone numbers of recipients to our protected website.</li>
+                                      <li>Make audio recordings of your outgoing messages by dialing the toll-free number provided.</li>
+                                      <li>Start calling from the website or a toll-free number (premium option). The number and length of phone listings you offer are unrestricted. Lists should be in a.csv format (a common Excel text format). If you wish, we may record your messages professionally.</li>
+                                      <li>The phone systems start making calls as soon as you start the voice broadcast campaign. Your message is played if someone answers the phone (or if our phone system detects an answering machine). If your call is not answered, the phone system will attempt thrice to relay your message later.</li>
+                              </ul>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>To start a voice broadcasting campaign, just register as a client and complete these simple steps:</p>
-                                        <ul>
-                                                <li>Upload phone numbers of recipients to our protected website.</li>
-                                                <li>Make audio recordings of your outgoing messages by dialing the toll-free number provided.</li>
-                                                <li>Start calling from the website or a toll-free number (premium option). The number and length of phone listings you offer are unrestricted. Lists should be in a.csv format (a common Excel text format). If you wish, we may record your messages professionally.</li>
-                                                <li>The phone systems start making calls as soon as you start the voice broadcast campaign. Your message is played if someone answers the phone (or if our phone system detects an answering machine). If your call is not answered, the phone system will attempt thrice to relay your message later.</li>
-                                        </ul>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">What are the uses of voice broadcasting?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        Voice broadcasting is a method of mass communication that allows users to deliver automated voice messages to a large number of people at once via a phone call. It may be used to conduct surveys, 
+                                        issue event invites, send reminders or notifications, and make crucial company announcements, among other things.
+                              </p>
+                                  </div>
                                 </div>
-                                
-        
-                                <div class="accordation">
-                                        <h3>What are the uses of voice broadcasting?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Is voice broadcasting legal?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                   <p>In India, voice broadcasting is a highly effective marketing method that is completely legal. Most nations have rules that make voice broadcasting permissible; nonetheless, it's best to double-check with your service provider for total clarity.</p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                Voice broadcasting is a method of mass communication that allows users to deliver automated voice messages to a large number of people at once via a phone call. It may be used to conduct surveys, issue event invites, send reminders or notifications, and make crucial company announcements, among other things.
-                                        </p>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does voice broadcasting cost?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        Bridgei2p offers low-cost voice broadcasting services by costing just <span style="color:#FF8303">Rs. 1800</span> per call on voice broadcasting rates.
+                              </p>
+                                  </div>
                                 </div>
-
-                                <div class="accordation">
-                                        <h3>Is voice broadcasting legal?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Can my voice broadcast campaign be customized?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>Yes, Bridgei2p is a company that specializes in the creation of customized calling campaigns. Inbound IVR (Interactive Speech Response) call answering services and outbound voice broadcasting are examples of these services. Bridgei2p has a dedicated team of call processing developers that can assess your needs and create a unique campaign for you in just a few hours!</p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                In India, voice broadcasting is a highly effective marketing method that is completely legal. Most nations have rules that make voice broadcasting permissible; nonetheless, it's best to double-check with your service provider for total clarity.
-                                        </p>
-                                </div>
-
-                                <div class="accordation">
-                                        <h3>How much does voice broadcasting cost?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>
-                                                Bridgei2p offers low-cost voice broadcasting services by costing just Rs. XYZ per call on voice broadcasting rates.
-                                        </p>
-                                </div>
-
-                                <div class="accordation">
-                                        <h3>Can my voice broadcast campaign be customized?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>
-                                                Yes, Bridgei2p is a company that specializes in the creation of customized calling campaigns. Inbound IVR (Interactive Speech Response) call answering services and outbound voice broadcasting are examples of these services. Bridgei2p has a dedicated team of call processing developers that can assess your needs and create a unique campaign for you in just a few hours!
-                                        </p>
-                                </div>
-
+                              </div>
                         </div>
                 </section>
+                <script  src="/resources/scripts/script1.js"></script>
         </section>
 
         <section id="pricing-id">

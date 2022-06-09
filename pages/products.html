@@ -5,9 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bridge Ip2</title>
+        
         <link rel="stylesheet" href="../resources/styles/product.css">
+        <link rel="stylesheet" href="/css/test.css">
         <script src="../resources/scripts/script.js" defer></script>
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+       
         <!-- AOS -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -30,6 +33,30 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
 
         <style>
+
+header nav ul li .nav-items {
+  max-width: 800px;
+  position: absolute;
+  top: 160%;
+  left: -300px;
+  z-index: 10000;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+          box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+  padding: 20px;
+  visibility: collapse;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 
 header nav ul li .nav-items .company-content {
   width: 300px;
@@ -232,11 +259,87 @@ header nav ul li .nav-items .company-content img {
   margin: -5.5px;
 }
 
+/*top button */
+#button1 {
+  display: inline-block;
+  background-color: #FF8303;
+  width: 50px;
+  height: 50px;
+  
+  text-align: center;
+  border-radius:50%;
+  position: fixed;
+  bottom: 30px;
+  right: 1px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button1::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.3em;
+  line-height: 50px;
+  color: #fff;
+}
+#button1:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button1:active {
+  background-color: #555;
+}
+#button1.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+
+@media (min-width: 500px) {
+  
+  #button1 {
+    margin: 30px;
+  }
+}
+
+
+
+
        
         </style>
         
 </head>
 <body>
+
+        <!--top button-->
+
+      <a id="button1"></a>
+
+      <script>
+        var btn = $('#button1');
+      
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+          btn.addClass('show');
+        } else {
+          btn.removeClass('show');
+        }
+      });
+      
+      btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+      });
+      
+      </script>
+
+
         <section class="head-section">
                 <header  id="header">
                         <!-- <div class="user-acc">
@@ -272,47 +375,48 @@ header nav ul li .nav-items .company-content img {
                                                     <div id="product-items" class="nav-items">
                                                             <div class="items-content">
                                                                     <div id="heading" class="heading">
-                                                                            <h3>Bridge I2P</h3>
-                                                                            <p>
-                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                            </p>
+                                                                            <h3>Bridgei2p</h3>
+                                                                            <p style="font-size:13px ; color:black;">
+                                                                                Switch to a dependable VoIP unified communication solution for your business to simplify your communications and take your company to greater heights with advanced features.
+                                                                        </p>
                                                                     </div>
                                                                     <div id="links" class="links">
                                                                             <div class="link">
                                                                                     <img src="../resources/img/Products Icons/icons_Business Phone System.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="./products.html">Business Phone System</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Simplify Business Communication With A Dynamic Cloud-based VoIP PBXware Telephony Platform.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                             <div class="link">
                                                                                     <img src="../resources/img/Products Icons/icons_Contact Center.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="./contact.html">Cloud Contact Centre</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Connect And Work With Agents Using A Comprehensive And Secure Cloud Telephony Solution.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                             <div class="link">
                                                                                     <img src="../resources/img/Products Icons/icons_IVR broadcasting.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="./IVRBroadcast.html">IVR Broadcasting</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Customize An Audio Message And Incorporate It in Your Company Requirements.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                     </div>
                                                             </div>
                                                             <div id="company-content" class="company-content">
-                                                                    <p>
-                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                            Aliquam tempus nibh eros, ac consequat nisl condimentum non.
-                                                                    </p>
-                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="160px" max-width="100%" alt="">
+                                                                <p style="font-size:13px ;">
+                                                                        Are you looking for a corporate communications solution that will allow you to stay connected from any location and on any device? 
+                                                                        Bridgei2p provides all of the contemporary capabilities at a reasonable price for all business types. 
+                                                                        You can take your company to the next level in a matter of minutes.
+                                                                </p>
+                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="175px" max-width="100%" alt="">
                                                             </div>
                                                     </div>
                                             </li>
@@ -321,9 +425,9 @@ header nav ul li .nav-items .company-content img {
                                                 <div id="solution-items" class="nav-items">
                                                     <div id="items-content" class="items-content">
                                                             <div class="heading">
-                                                                    <h3>Bridge I2P</h3>
-                                                                    <p>
-                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                    <h3>Bridgei2p</h3>
+                                                                    <p style="font-size:13px ; color:black;">
+                                                                        An all-in-one cloud solution for all your business needs. Discover advanced cloud computing services all in a single platform.
                                                                     </p>
                                                             </div>
                                                             <div class="links">
@@ -332,7 +436,7 @@ header nav ul li .nav-items .company-content img {
                                                                             <div class="text-content">
                                                                                     <a href="./solutions/professional-services.html">Professional Services</a>
                                                                                     <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
+                                                                                        See why professionals need a comprehensive platform to get more done with all the communication tools.
                                                                                     </p>
                                                                             </div>
                                                                     </div>
@@ -341,7 +445,7 @@ header nav ul li .nav-items .company-content img {
                                                                             <div class="text-content">
                                                                                     <a href="./solutions/call-center.html">Call Center</a>
                                                                                     <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
+                                                                                        Prioritize customers and understand their challenges using effective call campaigns.
                                                                                     </p>
                                                                             </div>
                                                                     </div>
@@ -350,7 +454,7 @@ header nav ul li .nav-items .company-content img {
                                                                             <div class="text-content">
                                                                                     <a href="./solutions/health.html">Healthcare</a>
                                                                                     <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
+                                                                                        Enable healthcare professionals to build an excellent rapport with patients, in real-time.
                                                                                     </p>
                                                                             </div>
                                                                     </div>
@@ -359,7 +463,7 @@ header nav ul li .nav-items .company-content img {
                                                                             <div class="text-content">
                                                                                     <a href="./solutions/retail.html">Retail</a>
                                                                                     <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
+                                                                                        One stop-shop to deliver exceptional services through a diverse array of channels.
                                                                                     </p>
                                                                             </div>
                                                                     </div>
@@ -368,7 +472,7 @@ header nav ul li .nav-items .company-content img {
                                                                             <div class="text-content">
                                                                                     <a href="./solutions/financial.html">Financial Services</a>
                                                                                     <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
+                                                                                        Offer a security-oriented and reliable client experience on any device.
                                                                                     </p>
                                                                             </div>
                                                                     </div>
@@ -377,18 +481,19 @@ header nav ul li .nav-items .company-content img {
                                                                             <div class="text-content">
                                                                                     <a href="./solutions/industrial-distribution.html">Industrial/Distribution</a>
                                                                                     <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
+                                                                                        An all-in-one cloud powered solution that aids in maximizing service quality.
                                                                                     </p>
                                                                             </div>
                                                                     </div>
                                                             </div>
                                                     </div>
                                                     <div class="company-content">
-                                                            <p>
-                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                    Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                            <p style="font-size:13px ;">
+                                                                By industry or business requirement, find smart solutions for your company. Bridgei2p helps you explore exceptional 
+                                                                services that improve customer satisfaction and maximize efficiency across a wide variety of channels. 
+                                                                You can drive guaranteed success through our cloud powered technology.
                                                             </p>
-                                                            <img src="../resources/img/image-in-the-place-logo.png" alt="">
+                                                            <img src="../resources/img/image-in-the-place-logo.png" alt="" height="400px">
                                                     </div>
                                             </div>
                                             </li>
@@ -488,9 +593,9 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-container">
                                                 <span><a href="/index.html" style="text-decoration-line:none ;" > Home</a> > <a href="/pages/products.html" style="text-decoration-line:none ;" > Products</a> > Business Phone System</span>
                                                 <h2>Unlock the Power of a <br> Business Phone System</h2>
-                                                <p style="font-size: 1.2rem; font-weight:600;">Revolutionize. Reconnect. Anywhere. Anytime.
+                                                <p style="font-size: 1.2rem; font-weight:600;">Revolutionize. Reconnect. Anywhere. Anytime.<br>
                                                         Never Miss a Business Lead & Work Smart with VoIP.</p>
-                                                        <p>Power your business with the most affordable cloud-based PBXware Telephone platform now in just 3 minutes.</p>
+                                                        <p>Power your business with the most affordable cloud-based PBX Telephone platform now in just 3 minutes.</p>
                                                 <div class="btn-container">
                                                         <button><a href="/pages/contact-us.html"> Start Free Trial</a></button>
                                                         <button><a href="/pages/contact-us.html">Get Quote</a></button>
@@ -532,8 +637,9 @@ header nav ul li .nav-items .company-content img {
                                                         <!-- <h4>Business Edition</h4> -->
                                                         <p>
                                                                 A multiline telephone system used in corporate situations for improved call handling is referred to as a business phone system. It has several useful features, such as fixed dialing, phone recording, internet faxing, ring groups, call transfers, conference calls, call metering and accounting, private and shared voice message boxes, and receiving calls from overseas consumers at a low cost. etc., to help improve company communication, customer satisfaction, and overall efficiency. Such systems provide your company with a professional image, follow privacy standards, and keep you linked to the rest of the world, with no geographic restrictions. Whether you're at home or on the road, our phone system ensures that you can still coordinate all of your company operations as needed. We can assist you at every step of your company's development! 
-                                                                A seamless mobile access, that’s what you really need!
+                                                                
                                                         </p>
+                                                       <p style="margin-top:10px ;"> <strong >A seamless mobile access, that’s what you really need!</strong></p>
                                                 </div>
                                                 <div class="img-container">
                                                         <img src="../resources/img/BUSINESS-PHONE-SYSTEM---img-1---overview.png" alt="">
@@ -541,25 +647,31 @@ header nav ul li .nav-items .company-content img {
                                                         <div class="circle-grey"></div>
                                                 </div>
                                 </div>
-                                <div id="features" data-tab-content>
-                                        <div class="text-content" style="margin: 10px 0;">
-                                                <!-- <h4>Business Features</h4> -->
-                                                <p>
-                                                        Let’s grab some attention as to what businesses do to upgrade their old telecommunication systems in favor of this new method of 
-                                                        handling internal and external communications. What characterizes Business phone systems from the tried-and-true on-premise alternatives? Consider these top-notch factors:
-                                                </p>
+                                
+                              
+                                
+                                <section class="benefit-business-contain-section" style="background-color: #fff;" id="features" data-tab-content>
+                                        <div class="benefit-business-contain-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                                data-aos-once="true"
+                                        data-aos-duration="1000">
+                                                <div class="img-container">
+                                                        <img  alt="" src="../resources/img/Business phone system/Features/Features---telecommunication-systems.png">
+                                                </div>
+                                                <div style="margin-top: -50px; margin-bottom: 50px;">
+                                                        <h3 style="font-size: clamp(1.4rem, 3vw, 1.6rem); max-width: 1500px; margin: 10px auto;"> Let’s grab some attention as to what businesses do to upgrade their old telecommunication systems in favor of this new method of 
+                                                                handling internal and external communications. </h3>
+                                                        <p>
+                                                                What characterizes Business phone systems from the tried-and-true on-premise alternatives? Consider these top-notch factors:
+                                                        </p>
+                                                </div>
                                         </div>
-                                        <div class="img-container">
-                                                <img src="../resources/img/Business phone system/Features/Features---telecommunication-systems.png" alt="">
-                                                <div class="circle-yellow"></div>
-                                                <div class="circle-grey"></div>
-                                        </div>
-                                </div>
+                                </section>
+                                
                                 <div id="benefits" data-tab-content>
                                         <!-- <div class="text-content">
                                                 <h4>Business FAQs</h4>
                                                 <p>
-                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                         <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                                 </p>
                                         </div>
@@ -573,7 +685,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Business Pricing</h4>
                                                 <p>
-                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                         <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud. <br>
                                                 </p>
                                         </div>
@@ -622,28 +734,50 @@ header nav ul li .nav-items .company-content img {
                 data-aos-once="true"
                         data-aos-duration="1000">
                                 <h3>
-                                        Experience The Magic Right Now!
+                                        Experience The Magic Right Now!<br>
                                                 Declutter Your Workstation. Upgrade to Business Phone Systems. 
                                 </h3>
                                 <!-- <button>See Pricing</button> -->
                         </div>
                 </section>
-                <section class="business-contain-section">
-                        <div class="business-contain-layout"  data-aos="fade-up" data-aos-easing="linear"  
+
+                <section class="business-edition-section" style="  background-color: #BDF3F4; ">
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <!-- <h3>Bring everyone and everything together on Bridge i2p </h3> -->
-                                <div class="img-container">
-                                        <img src="../resources/img/pbx.png" alt="">
-                                        
+                                <div class="tab-content"  style="margin: 0px;">
+                                        <div class="img-container" style="padding-top: 50px;">
+                                                <img src="../resources/img/pbx.png " alt="">
+                                                <!-- <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div> -->
+                                        </div>
+                                        <div class="text-content" style="padding-top: 50px;">
+                                                
+                                                <p>
+                                                        PBX's Business Edition is a complete and fully configurable VoIP solution that provides you with a full range of corporate phone system features and capabilities. 
+                                                        Each edition of Business PBX supports unique features that maximize performance, reliability, and expandability, allowing you to revolutionize the way you do business and boost workplace productivity.
+                                                </p>
+                                        </div>
                                 </div>
-                                <div class="text-content" style="margin-top:-50px ;">
-                                        <!-- <h3>Business Edition</h3> -->
-                                        <p>
-                                                PBXware's Business Edition is a complete and fully configurable VoIP solution that provides you with a full range of corporate phone system features and capabilities. Each edition of Business PBX supports unique features that maximize performance, reliability, and expandability, allowing you to revolutionize the way you do business and boost workplace productivity.
-                                                With unique deployment choices ranging from on-premise softswitch deployments based on customized units and custom hardware to Hosted PBX systems serviced via SERVERware in the Cloud, it offers greater flexibility and customization potential, giving you more control over the end result.        
-                                        </p>
-                                        <!-- <button>View More</button> -->
+                        </div>
+                </section>
+
+                <section class="business-edition-section" style="  background-color: #BDF3F4;  ">
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                        data-aos-duration="1000">
+                                <div class="tab-content"   style="margin: 0px;">
+                                        <div class="text-content" style="padding-top: 50px; ">
+                                               
+                                                <p>
+                                                        With unique deployment choices ranging from on-premise softswitch deployments based on customized units and custom hardware to Hosted PBX systems serviced via SERVERware in the Cloud, it offers greater flexibility and customization potential, giving you more control over the end result.        
+                                                </p>
+                                        </div>
+                                        <div class="img-container" style="padding-bottom: 50px; padding-top: 50px;">
+                                                <img src="../resources/img/PBXware's-Business-Edition.png" alt="">
+                                                <!-- <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div> -->
+                                        </div>
                                 </div>
                         </div>
                 </section>
@@ -653,28 +787,60 @@ header nav ul li .nav-items .company-content img {
                         data-aos-duration="1000">
                                 <h3>
                                         Deploy Cloud PBX To Your Employees and Up-scale Your Voice Services with Absolute Chic.
-                                        Make Your Business Stand Out with Your Own Branding Added to The Pbxware.
+                                        Make Your Business Stand Out with Your Own Branding Added to The PBX.
                                 </h3>
                                 <!-- <button>See Pricing</button> -->
                         </div>
                 </section>
-                <section class="business-contain-section" >
-                        <div class="business-contain-layout"  data-aos="fade-up" data-aos-easing="linear"  
+
+                <section class="business-edition-section" style="  background-color: #BDF3F4; padding-top: 50px;">
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
-                        data-aos-duration="1000" >
-                                <h3 style="margin-top:-5px ;">Complete Integration, possible? YES! </h3>
-                                <div class="img-container" style="margin-top:-20px ;">
-                                        <img src="../resources/img/01-01.png" alt="">
-                                        
+                        data-aos-duration="1000">
+                                <div class="tab-content"  style="margin: 0px;">
+                                        <div class="img-container" style="padding-top: 50px;">
+                                                <img src="../resources/img/01-01.png" alt="">
+                                                <!-- <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div> -->
+                                        </div>
+                                        <div class="text-content" style="padding-top: 50px;">
+                                                
+                                                <p>
+                                                        Transform your VoIP phone system into a fully integrated system that can be used from your PC, smartphone, tablet, or workstation. By utilizing our VoIP solutions for businesses, you will be able to reduce your deployment expenses, propelling it to the next level and establishing it as a distinct brand that will be impossible to compete with. Our solution is simpler to implement and maintain. Take a decision today and allow us to assist you in taking the next step by supplying you with top VoIP phone systems. 
+                                                </p>
+                                        </div>
                                 </div>
-                                <div class="text-content" style="margin-top:-20px ;">
-                                        <!-- <h3>Business Edition</h3> -->
-                                        <p>
-                                                Transform your VoIP phone system into a fully integrated system that can be used from your PC, smartphone, tablet, or workstation. By utilizing our VoIP solutions for businesses, you will be able to reduce your deployment expenses, propelling it to the next level and establishing it as a distinct brand that will be impossible to compete with. Our solution is simpler to implement and maintain. Take a decision today and allow us to assist you in taking the next step by supplying you with top VoIP phone systems. 
-                                                Did you know? You can lower your monthly telephone cost by HALF, with Bridgei2p’s VoIP telephone system! That saves A LOT of money!        
-                                        </p>
-                                        <!-- <button>View More</button> -->
+                        </div>
+                </section>
+
+                <section class="business-edition-section" style="  background-color: #BDF3F4;padding-bottom: 50px; padding-top: 5-px;">
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                        data-aos-duration="1000">
+                                <div class="tab-content"   style="margin: 0px;">
+                                        <div class="text-content" style="padding-top: 50px;">
+                                               
+                                                <p>
+                                                        Did you know? You can lower your monthly telephone cost by HALF, with Bridgei2p’s VoIP telephone system! That saves A LOT of money!        
+                                                </p>
+                                        </div>
+                                        <div class="img-container" style="padding-top: 50px; padding-bottom: 50px;">
+                                                <img src="../resources/img/Transform-your-VoIP-phone-system.png" alt="">
+                                                <!-- <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div> -->
+                                        </div>
                                 </div>
+                        </div>
+                </section>
+               
+                <section class="quote-section">
+                        <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                        data-aos-duration="1000">
+                                <h3>
+                                        Did you know? You can lower your monthly telephone cost by HALF, with Bridgei2p’s VoIP telephone system! That saves A LOT of money! 
+                                </h3>
+                                <!-- <button>See Pricing</button> -->
                         </div>
                 </section>
                 <section class="faq-section">
@@ -686,71 +852,67 @@ header nav ul li .nav-items .company-content img {
                         <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <div class="accordation">
-                                        <h3>What is a Business Phone System?</h3>
-                                        <ion-icon name="add" class="add-btn" ></ion-icon>
+                        <div class="accordion">
+                                <div class="accordion-item">
+                                  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What is a Business Phone System?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                      A business telephone system has multiple telephone lines that are commonly used in a business setting. 
+                                      Based on the particular requirements of each business, it contains systems ranging from a few telephones to Private Branch Exchange (PBX).
+                              </p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                A business telephone system has multiple telephone lines that are commonly used in a business setting. Based on the particular requirements of each business, it contains systems ranging from a few telephones to Private Branch Exchange (PBX).
-                                        </p>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">What is PBX?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                      PBX is a scalable PBX system that supports classic telephony as well as new VOIP technologies. 
+                                      To make external phone calls, users share a number of outside lines. Users can also make local calls to each other.
+                                       PBX offers many additional features, such as: Ring groups, Conferences, Interactive Voice Reponses, Queues, Voicemail boxes, Realtime monitoring, Call recordings.
+                              </p>
+                                  </div>
                                 </div>
-        
-                                <div class="accordation">
-                                        <h3>What is PBXware?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Why should I consider purchasing PBX?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <ul>
+                                      <li>PBX will make your business work more smoothly and efficiently than ever before, while also saving you money on your overall communications costs.</li>
+                                      <li>PBX is a dependable system.</li>
+                                      <li>With flexible role-based administration, PBX is EASY TO USE.</li>
+                                      <li>Because of improved connection with customers/clients and lower phone expenses, your bottom line should improve.</li>
+                                      <li>There will be no more employees that are unavailable. PBX can keep your staff in touch even while they're on the road or at home.</li>
+                                      <li>You'll never have to worry about how your front-line staff interact with crucial clients/customers or business partners again, because PBX can record or monitor the calls.</li>
+                                      <li>Proven scalable solution.</li>
+                                      <li>A Turn Key Solution.</li>
+                                      <li>Handsets from a wide range of manufacturers are supported.</li>
+                                      <li>Superior Assistance.</li>
+                                      <li>Platforms and delivery options that are adaptable.</li>
+                              </ul>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                PBXware is a scalable PBX system that supports classic telephony as well as new VOIP technologies. To make external phone calls, users share a number of outside lines. Users can also make local calls to each other. PBXware offers many additional features, such as: Ring groups, Conferences, Interactive Voice Reponses, Queues, Voicemail boxes, Realtime monitoring, Call recordings
-                                        </p>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How does a Business Phone system work?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                      A Business Phone system, unlike standard PBX systems, does not require metal connectors to function. They use VOIP (Voice Over Internet Protocol), a technology that allows systems to communicate electronically over the internet. Your analogue voice conversations are transformed into data packets in the cloud and may be routed to any location/smart device with a sufficient internet connection via VOIP. One or more SIP/VoIP phones, as well as a VoIP Gateway, make up PBX. Clients and software or hardware-based phones connect to the PBX server and may then make calls. PBX maintains a database of all phones/users and their associated addresses, and it may connect internal calls or route external calls via a VoIP gateway or a VoIP service provider. A business phone system, helps businesses interact with their consumers, but with superior cloud-based technology, allowing organizations to grow.
+                              </p>
+                                  </div>
                                 </div>
-        
-                                <div class="accordation">
-                                        <h3>Why should I consider purchasing PBXware?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How can Business Phone system save my time and money?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <ul>
+                                      <li>Firm phone systems enable business branch offices to interact effortlessly utilizing VoIP capabilities, which cuts phone costs and time while also allowing users to reach faraway coworkers via extension numbers.</li>
+                                      <li>The Business Phone System effortlessly develops conference bridges between workers on a local or remote (international) level, saving time and potential trip costs.</li>
+                                      <li>Calls may be diverted to employee mobile phones, giving them greater flexibility, mobility, and time to improve company performance. This immediately saves time and money.</li>
+                                      <li>Users may quickly walk through the settings using PBX's browser-based system administration. As a result, it saves a lot of time and money on system maintenance, technical support, training, and other things. The use of VoIP will drastically reduce the cost of telephone communication.</li>
+                              </ul>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <ul>
-                                                <li>PBXware will make your business work more smoothly and efficiently than ever before, while also saving you money on your overall communications costs.</li>
-                                                <li>PBXWARE is a dependable system.</li>
-                                                <li>With flexible role-based administration, PBXware is EASY TO USE.</li>
-                                                <li>Because of improved connection with customers/clients and lower phone expenses, your bottom line should improve.</li>
-                                                <li>There will be no more employees that are unavailable. PBXware can keep your staff in touch even while they're on the road or at home.</li>
-                                                <li>You'll never have to worry about how your front-line staff interact with crucial clients/customers or business partners again, because PBXware can record or monitor the calls.</li>
-                                                <li>Proven scalable solution</li>
-                                                <li>A Turn Key Solution</li>
-                                                <li>Simple to use</li>
-                                                <li>Handsets from a wide range of manufacturers are supported.</li>
-                                                <li>Superior Assistance</li>
-                                                <li>Platforms and delivery options that are adaptable</li>
-                                        </ul>
-                                </div>
-        
-                                <div class="accordation">
-                                        <h3>How does a Business Phone system work?</h3>
-                                        <ion-icon name="add" class="add-btn"  ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>
-                                                A Business Phone system, unlike standard PBX systems, does not require metal connectors to function. They use VOIP (Voice Over Internet Protocol), a technology that allows systems to communicate electronically over the internet. Your analogue voice conversations are transformed into data packets in the cloud and may be routed to any location/smart device with a sufficient internet connection via VOIP. One or more SIP/VoIP phones, as well as a VoIP Gateway, make up PBXware. Clients and software or hardware-based phones connect to the PBXware server and may then make calls. PBXware maintains a database of all phones/users and their associated addresses, and it may connect internal calls or route external calls via a VoIP gateway or a VoIP service provider. A business phone system, helps businesses interact with their consumers, but with superior cloud-based technology, allowing organizations to grow.
-                                        </p>
-                                </div>
-        
-                                <div class="accordation">
-                                        <h3>How can Business Phone system save my time and money?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <ul>
-                                                <li>Firm phone systems enable business branch offices to interact effortlessly utilizing VoIP capabilities, which cuts phone costs and time while also allowing users to reach faraway coworkers via extension numbers.</li>
-                                                <li>The Business Phone System effortlessly develops conference bridges between workers on a local or remote (international) level, saving time and potential trip costs.</li>
-                                                <li>Calls may be diverted to employee mobile phones, giving them greater flexibility, mobility, and time to improve company performance. This immediately saves time and money.</li>
-                                                <li>Users may quickly walk through the settings using PBXware's browser-based system administration. As a result, it saves a lot of time and money on system maintenance, technical support, training, and other things. The use of VoIP will drastically reduce the cost of telephone communication.</li>
-                                        </ul>
-                                </div>
+                              </div>
                         </div>
                 </section>
+               
         </section>
 
         <section id="features-id" class="features-section">
@@ -955,7 +1117,7 @@ header nav ul li .nav-items .company-content img {
                                                 <h4>Voice mail</h4>
                                                 <p>
                                                         Address your callers with unique voicemail messages. Undoubtedly, this leaves a big brand impact on customers. Having a different voicemail for every number helps tackle complaints smoothly. 
-                                                        Google Cloud Speech-to-Text and IBM Watson are integrated with PBXware's voicemail system (STT). Transcripts of your voicemail messages will be emailed to you in text format.        
+                                                        Google Cloud Speech-to-Text and IBM Watson are integrated with PBX's voicemail system (STT). Transcripts of your voicemail messages will be emailed to you in text format.        
                                                 </p>
                                         </div>
                                 </div>
@@ -966,7 +1128,7 @@ header nav ul li .nav-items .company-content img {
                         <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <div class="tab-content"  >
+                                <div class="tab-content "   >
                                         <div class="text-content">
                                                 <h4>Call analytics</h4>
                                                 <p>
@@ -1012,7 +1174,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>API</h4>
                                                 <p>
-                                                        Use the PBXware application programming interface to connect your apps to PBXware. It's simple, powerful, and safe (API). By using the HTTP 
+                                                        Use the PBX application programming interface to connect your apps to PBX. It's simple, powerful, and safe (API). By using the HTTP 
                                                         protocol, you may have access to Extensions, Trunks, DIDs, Ring Groups, IVRs, and more.
                                                 </p>
                                         </div>
@@ -1038,10 +1200,10 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>CRM and VoIP integration allows for extended capabilities </h4>
                                                 <p>
-                                                        A Customer Relationship Management platform (CRM) is a centralized hub for all of your customer data. It’s key for any business as it allows you to work from a single place with everything you need, thus boosting business performance across all facets of your business. PBXware Business integrates with the most popular business apps, such as Salesforce, SugarCRM, MS Dynamics, Zoho, Zendesk, Bullhorn, Vtiger, Pipedrive, SuiteCRM, Hubspot, etc. 
+                                                        A Customer Relationship Management platform (CRM) is a centralized hub for all of your customer data. It’s key for any business as it allows you to work from a single place with everything you need, thus boosting business performance across all facets of your business. PBX Business integrates with the most popular business apps, such as Salesforce, SugarCRM, MS Dynamics, Zoho, Zendesk, Bullhorn, Vtiger, Pipedrive, SuiteCRM, Hubspot, etc. 
                                                         Integrating VoIP this way gives way to a virtual receptionist, so to speak. That’s fantastic!
                                                 </p>
-                                                <span>Know more about <a href="./integration.html">CRM</a> and it's importance</span>
+                                                <span>Know more about <a href="./integration.html">CRM</a> and it's importance.</span>
                                         </div>
                                 </div>
                         </div>
@@ -1049,15 +1211,15 @@ header nav ul li .nav-items .company-content img {
 
                 <section class="linked-section">
                         <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  
-                data-aos-once="true"
+                        data-aos-once="true"
                         data-aos-duration="1000">
-                                <h3>
+                                <h3 style="font-size: clamp(1.3rem, 4vw, 1.8rem); max-width: 1000px; ">
                                         To learn more, schedule a free consultation with one of our VoIP experts.
                                 </h3>
-                                <a href="./contact-us.html">Schedule a Call</a>
+                                <a href="/pages/contact-us.html#request-demo">Schedule a Call</a>
                         </div>
-                </section>
-
+                </section>   
+              
                 <section class="faq-section">
                         <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
@@ -1067,73 +1229,70 @@ header nav ul li .nav-items .company-content img {
                         <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <div class="accordation">
-                                        <h3>What is a Business Phone System?</h3>
-                                        <ion-icon name="add" class="add-btn" ></ion-icon>
+                        <div class="accordion">
+                                <div class="accordion-item">
+                                  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What is a Business Phone System?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                      A business telephone system has multiple telephone lines that are commonly used in a business setting. 
+                                      Based on the particular requirements of each business, it contains systems ranging from a few telephones to Private Branch Exchange (PBX).
+                              </p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                A business telephone system has multiple telephone lines that are commonly used in a business setting. Based on the particular requirements of each business, it contains systems ranging from a few telephones to Private Branch Exchange (PBX).
-                                        </p>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">What is PBX?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                      PBX is a scalable PBX system that supports classic telephony as well as new VOIP technologies. 
+                                      To make external phone calls, users share a number of outside lines. Users can also make local calls to each other.
+                                       PBX offers many additional features, such as: Ring groups, Conferences, Interactive Voice Reponses, Queues, Voicemail boxes, Realtime monitoring, Call recordings.
+                              </p>
+                                  </div>
                                 </div>
-        
-                                <div class="accordation">
-                                        <h3>What is PBXware?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Why should I consider purchasing PBX?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <ul>
+                                      <li>PBX will make your business work more smoothly and efficiently than ever before, while also saving you money on your overall communications costs.</li>
+                                      <li>PBX is a dependable system.</li>
+                                      <li>With flexible role-based administration, PBX is EASY TO USE.</li>
+                                      <li>Because of improved connection with customers/clients and lower phone expenses, your bottom line should improve.</li>
+                                      <li>There will be no more employees that are unavailable. PBX can keep your staff in touch even while they're on the road or at home.</li>
+                                      <li>You'll never have to worry about how your front-line staff interact with crucial clients/customers or business partners again, because PBX can record or monitor the calls.</li>
+                                      <li>Proven scalable solution.</li>
+                                      <li>A Turn Key Solution.</li>
+                                      <li>Handsets from a wide range of manufacturers are supported.</li>
+                                      <li>Superior Assistance.</li>
+                                      <li>Platforms and delivery options that are adaptable.</li>
+                              </ul>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                PBXware is a scalable PBX system that supports classic telephony as well as new VOIP technologies. To make external phone calls, users share a number of outside lines. Users can also make local calls to each other. PBXware offers many additional features, such as: Ring groups, Conferences, Interactive Voice Reponses, Queues, Voicemail boxes, Realtime monitoring, Call recordings
-                                        </p>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How does a Business Phone system work?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                      A Business Phone system, unlike standard PBX systems, does not require metal connectors to function. They use VOIP (Voice Over Internet Protocol), a technology that allows systems to communicate electronically over the internet. Your analogue voice conversations are transformed into data packets in the cloud and may be routed to any location/smart device with a sufficient internet connection via VOIP. One or more SIP/VoIP phones, as well as a VoIP Gateway, make up PBX. Clients and software or hardware-based phones connect to the PBX server and may then make calls. PBX maintains a database of all phones/users and their associated addresses, and it may connect internal calls or route external calls via a VoIP gateway or a VoIP service provider. A business phone system, helps businesses interact with their consumers, but with superior cloud-based technology, allowing organizations to grow.
+                              </p>
+                                  </div>
                                 </div>
-        
-                                <div class="accordation">
-                                        <h3>Why should I consider purchasing PBXware?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How can Business Phone system save my time and money?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <ul>
+                                      <li>Firm phone systems enable business branch offices to interact effortlessly utilizing VoIP capabilities, which cuts phone costs and time while also allowing users to reach faraway coworkers via extension numbers.</li>
+                                      <li>The Business Phone System effortlessly develops conference bridges between workers on a local or remote (international) level, saving time and potential trip costs.</li>
+                                      <li>Calls may be diverted to employee mobile phones, giving them greater flexibility, mobility, and time to improve company performance. This immediately saves time and money.</li>
+                                      <li>Users may quickly walk through the settings using PBX's browser-based system administration. As a result, it saves a lot of time and money on system maintenance, technical support, training, and other things. The use of VoIP will drastically reduce the cost of telephone communication.</li>
+                              </ul>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <ul>
-                                                <li>PBXware will make your business work more smoothly and efficiently than ever before, while also saving you money on your overall communications costs.</li>
-                                                <li>PBXWARE is a dependable system.</li>
-                                                <li>With flexible role-based administration, PBXware is EASY TO USE.</li>
-                                                <li>Because of improved connection with customers/clients and lower phone expenses, your bottom line should improve.</li>
-                                                <li>There will be no more employees that are unavailable. PBXware can keep your staff in touch even while they're on the road or at home.</li>
-                                                <li>You'll never have to worry about how your front-line staff interact with crucial clients/customers or business partners again, because PBXware can record or monitor the calls.</li>
-                                                <li>Proven scalable solution</li>
-                                                <li>A Turn Key Solution</li>
-                                                <li>Simple to use</li>
-                                                <li>Handsets from a wide range of manufacturers are supported.</li>
-                                                <li>Superior Assistance</li>
-                                                <li>Platforms and delivery options that are adaptable</li>
-                                        </ul>
-                                </div>
-        
-                                <div class="accordation">
-                                        <h3>How does a Business Phone system work?</h3>
-                                        <ion-icon name="add" class="add-btn"  ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>
-                                                A Business Phone system, unlike standard PBX systems, does not require metal connectors to function. They use VOIP (Voice Over Internet Protocol), a technology that allows systems to communicate electronically over the internet. Your analogue voice conversations are transformed into data packets in the cloud and may be routed to any location/smart device with a sufficient internet connection via VOIP. One or more SIP/VoIP phones, as well as a VoIP Gateway, make up PBXware. Clients and software or hardware-based phones connect to the PBXware server and may then make calls. PBXware maintains a database of all phones/users and their associated addresses, and it may connect internal calls or route external calls via a VoIP gateway or a VoIP service provider. A business phone system, helps businesses interact with their consumers, but with superior cloud-based technology, allowing organizations to grow.
-                                        </p>
-                                </div>
-        
-                                <div class="accordation">
-                                        <h3>How can Business Phone system save my time and money?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <ul>
-                                                <li>Firm phone systems enable business branch offices to interact effortlessly utilizing VoIP capabilities, which cuts phone costs and time while also allowing users to reach faraway coworkers via extension numbers.</li>
-                                                <li>The Business Phone System effortlessly develops conference bridges between workers on a local or remote (international) level, saving time and potential trip costs.</li>
-                                                <li>Calls may be diverted to employee mobile phones, giving them greater flexibility, mobility, and time to improve company performance. This immediately saves time and money.</li>
-                                                <li>Users may quickly walk through the settings using PBXware's browser-based system administration. As a result, it saves a lot of time and money on system maintenance, technical support, training, and other things. The use of VoIP will drastically reduce the cost of telephone communication.</li>
-                                        </ul>
-                                </div>
+                              </div>
                         </div>
+                       
                 </section>
+               
         </section>
-
+       
         <section id="benefits-id">
                 <section class="benefit-business-contain-section" style="background-color: #fff;">
                         <div class="benefit-business-contain-layout"  data-aos="fade-up" data-aos-easing="linear"  
@@ -1145,7 +1304,7 @@ header nav ul li .nav-items .company-content img {
                                 <div class="text-content">
                                         <h3>REASONS WHY BUSINESSES NEED A VOIP PHONE SYSTEM </h3>
                                         <!-- <p>
-                                                PBXware's Business Edition is a complete and fully configurable VoIP solution that provides you with a full range of corporate phone system features and capabilities. Each edition of Business PBX supports unique features that maximize performance, reliability, and expandability, allowing you to revolutionize the way you do business and boost workplace productivity.
+                                                PBX's Business Edition is a complete and fully configurable VoIP solution that provides you with a full range of corporate phone system features and capabilities. Each edition of Business PBX supports unique features that maximize performance, reliability, and expandability, allowing you to revolutionize the way you do business and boost workplace productivity.
                                                 With unique deployment choices ranging from on-premise softswitch deployments based on customized units and custom hardware to Hosted PBX systems serviced via SERVERware in the Cloud, it offers greater flexibility and customization potential, giving you more control over the end result.        
                                         </p> -->
                                 </div>
@@ -1181,7 +1340,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Safe network</h4>
                                                 <p>
-                                                        Bridgei2p's business phone system is powered by a modular network developed by professional engineers. We guarantee high quality, security, and dependability. Back up your files to the cloud with Amazon S3, Google Drive, Dropbox, and FTP as they are all integrated with PBXware. You may automatically save voicemail, fax, and call data records in a secure location. Communications may be handled using an easy-to-use online interface that is available from any internet-enabled device, such as a PC or a tablet. Once hooked in, entrepreneurs have full control of the system, giving their current phones functionalities they never had before.
+                                                        Bridgei2p's business phone system is powered by a modular network developed by professional engineers. We guarantee high quality, security, and dependability. Back up your files to the cloud with Amazon S3, Google Drive, Dropbox, and FTP as they are all integrated with PBX. You may automatically save voicemail, fax, and call data records in a secure location. Communications may be handled using an easy-to-use online interface that is available from any internet-enabled device, such as a PC or a tablet. Once hooked in, entrepreneurs have full control of the system, giving their current phones functionalities they never had before.
                                                          Your voicemails are secure with us since they are completely encrypted and meet all industry requirements.         
                                                 </p>
                                         </div>
@@ -1207,7 +1366,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Customized for all industries</h4>
                                                 <p>
-                                                        Everyone will find something they enjoy. This benefits all industries, including insurance, hospitality, consulting enterprises, estate development, education, medical services, and plenty more! Because no two businesses are alike, we tailor our software to meet the unique requirements of each one. If your company requires a feature that is not currently available in PBXware, our team of highly 
+                                                        Everyone will find something they enjoy. This benefits all industries, including insurance, hospitality, consulting enterprises, estate development, education, medical services, and plenty more! Because no two businesses are alike, we tailor our software to meet the unique requirements of each one. If your company requires a feature that is not currently available in PBX, our team of highly 
                                                         competent developers will design and implement it as soon as feasible.        
                                                 </p>
                                         </div>
@@ -1223,8 +1382,8 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Innovation to security</h4>
                                                 <p>
-                                                        Inventing and enhancing our VoIP phone services, remains our priority. No doubt, your company will always have the most advanced VoIP technologies and phone systems. We also provide established encryption algorithms to ensure security. TLS (Transport Layer Security) and SRTP (Secure Real-time Transport Protocol) protocols are used by PBXware business version to encrypt your conversations, which considerably boosts security. 
-                                                        PBXware now supports Let's Encrypt SSL certificates, which adds an extra degree of protection.         
+                                                        Inventing and enhancing our VoIP phone services, remains our priority. No doubt, your company will always have the most advanced VoIP technologies and phone systems. We also provide established encryption algorithms to ensure security. TLS (Transport Layer Security) and SRTP (Secure Real-time Transport Protocol) protocols are used by PBX business version to encrypt your conversations, which considerably boosts security. 
+                                                        PBX now supports Let's Encrypt SSL certificates, which adds an extra degree of protection.         
                                                 </p>
                                         </div>
                                         <div class="img-container">
@@ -1289,9 +1448,9 @@ header nav ul li .nav-items .company-content img {
                                                 <div class="circle-grey"></div> -->
                                         </div>
                                         <div class="text-content">
-                                                <h4>LCR</h4>
+                                                <h4>Least Cost Routing (LCR)</h4>
                                                 <p>
-                                                        You may choose the ITSP provider for traffic routing depending on cost with LCR. It is the process of determining and guiding the 
+                                                        You may choose the ITSP (Internet Telephony Service Provider) for traffic routing depending on cost with LCR. It is the process of determining and guiding the 
                                                         course of outgoing and incoming communications traffic based on the least expensive call route.
                                                 </p>
                                         </div>
@@ -1336,7 +1495,7 @@ header nav ul li .nav-items .company-content img {
                                                         No contracts to sign, no hidden charges. You can cancel your service at any moment without penalty.
                                                 </p>
                                                 <span>
-                                                        Check out our <a href="#">Pricing</a> details.        
+                                                        Check out our Pricing details.        
                                                 </span>
                                         </div>
                                 </div>
@@ -1345,16 +1504,16 @@ header nav ul li .nav-items .company-content img {
 
                 <section class="linked-section">
                         <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  
-                data-aos-once="true"
+                        data-aos-once="true"
                         data-aos-duration="1000">
-                                <h3>
+                                <h3 style="font-size: clamp(1.3rem, 4vw, 1.8rem); max-width: 1000px; ">
                                         To learn more, schedule a free consultation with one of our VoIP experts.
                                 </h3>
-                                <a href="./contact-us.html">Schedule a Call</a>
+                                <a href="/pages/contact-us.html#request-demo">Schedule a Call</a>
                         </div>
-                </section>
+                </section> 
 
-                <section class="faq-section" style="padding-top: 20px;">
+                <section class="faq-section">
                         <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
@@ -1363,71 +1522,67 @@ header nav ul li .nav-items .company-content img {
                         <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <div class="accordation">
-                                        <h3>What is a Business Phone System?</h3>
-                                        <ion-icon name="add" class="add-btn" ></ion-icon>
+                        <div class="accordion">
+                                <div class="accordion-item">
+                                  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What is a Business Phone System?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                      A business telephone system has multiple telephone lines that are commonly used in a business setting. 
+                                      Based on the particular requirements of each business, it contains systems ranging from a few telephones to Private Branch Exchange (PBX).
+                              </p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                A business telephone system has multiple telephone lines that are commonly used in a business setting. Based on the particular requirements of each business, it contains systems ranging from a few telephones to Private Branch Exchange (PBX).
-                                        </p>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">What is PBX?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                      PBX is a scalable PBX system that supports classic telephony as well as new VOIP technologies. 
+                                      To make external phone calls, users share a number of outside lines. Users can also make local calls to each other.
+                                       PBX offers many additional features, such as: Ring groups, Conferences, Interactive Voice Reponses, Queues, Voicemail boxes, Realtime monitoring, Call recordings.
+                              </p>
+                                  </div>
                                 </div>
-        
-                                <div class="accordation">
-                                        <h3>What is PBXware?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Why should I consider purchasing PBX?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <ul>
+                                      <li>PBX will make your business work more smoothly and efficiently than ever before, while also saving you money on your overall communications costs.</li>
+                                      <li>PBX is a dependable system.</li>
+                                      <li>With flexible role-based administration, PBX is EASY TO USE.</li>
+                                      <li>Because of improved connection with customers/clients and lower phone expenses, your bottom line should improve.</li>
+                                      <li>There will be no more employees that are unavailable. PBX can keep your staff in touch even while they're on the road or at home.</li>
+                                      <li>You'll never have to worry about how your front-line staff interact with crucial clients/customers or business partners again, because PBX can record or monitor the calls.</li>
+                                      <li>Proven scalable solution.</li>
+                                      <li>A Turn Key Solution.</li>
+                                      <li>Handsets from a wide range of manufacturers are supported.</li>
+                                      <li>Superior Assistance.</li>
+                                      <li>Platforms and delivery options that are adaptable.</li>
+                              </ul>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                PBXware is a scalable PBX system that supports classic telephony as well as new VOIP technologies. To make external phone calls, users share a number of outside lines. Users can also make local calls to each other. PBXware offers many additional features, such as: Ring groups, Conferences, Interactive Voice Reponses, Queues, Voicemail boxes, Realtime monitoring, Call recordings
-                                        </p>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How does a Business Phone system work?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                      A Business Phone system, unlike standard PBX systems, does not require metal connectors to function. They use VOIP (Voice Over Internet Protocol), a technology that allows systems to communicate electronically over the internet. Your analogue voice conversations are transformed into data packets in the cloud and may be routed to any location/smart device with a sufficient internet connection via VOIP. One or more SIP/VoIP phones, as well as a VoIP Gateway, make up PBX. Clients and software or hardware-based phones connect to the PBX server and may then make calls. PBX maintains a database of all phones/users and their associated addresses, and it may connect internal calls or route external calls via a VoIP gateway or a VoIP service provider. A business phone system, helps businesses interact with their consumers, but with superior cloud-based technology, allowing organizations to grow.
+                              </p>
+                                  </div>
                                 </div>
-        
-                                <div class="accordation">
-                                        <h3>Why should I consider purchasing PBXware?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How can Business Phone system save my time and money?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <ul>
+                                      <li>Firm phone systems enable business branch offices to interact effortlessly utilizing VoIP capabilities, which cuts phone costs and time while also allowing users to reach faraway coworkers via extension numbers.</li>
+                                      <li>The Business Phone System effortlessly develops conference bridges between workers on a local or remote (international) level, saving time and potential trip costs.</li>
+                                      <li>Calls may be diverted to employee mobile phones, giving them greater flexibility, mobility, and time to improve company performance. This immediately saves time and money.</li>
+                                      <li>Users may quickly walk through the settings using PBX's browser-based system administration. As a result, it saves a lot of time and money on system maintenance, technical support, training, and other things. The use of VoIP will drastically reduce the cost of telephone communication.</li>
+                              </ul>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <ul>
-                                                <li>PBXware will make your business work more smoothly and efficiently than ever before, while also saving you money on your overall communications costs.</li>
-                                                <li>PBXWARE is a dependable system.</li>
-                                                <li>With flexible role-based administration, PBXware is EASY TO USE.</li>
-                                                <li>Because of improved connection with customers/clients and lower phone expenses, your bottom line should improve.</li>
-                                                <li>There will be no more employees that are unavailable. PBXware can keep your staff in touch even while they're on the road or at home.</li>
-                                                <li>You'll never have to worry about how your front-line staff interact with crucial clients/customers or business partners again, because PBXware can record or monitor the calls.</li>
-                                                <li>Proven scalable solution</li>
-                                                <li>A Turn Key Solution</li>
-                                                <li>Simple to use</li>
-                                                <li>Handsets from a wide range of manufacturers are supported.</li>
-                                                <li>Superior Assistance</li>
-                                                <li>Platforms and delivery options that are adaptable</li>
-                                        </ul>
-                                </div>
-        
-                                <div class="accordation">
-                                        <h3>How does a Business Phone system work?</h3>
-                                        <ion-icon name="add" class="add-btn"  ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>
-                                                A Business Phone system, unlike standard PBX systems, does not require metal connectors to function. They use VOIP (Voice Over Internet Protocol), a technology that allows systems to communicate electronically over the internet. Your analogue voice conversations are transformed into data packets in the cloud and may be routed to any location/smart device with a sufficient internet connection via VOIP. One or more SIP/VoIP phones, as well as a VoIP Gateway, make up PBXware. Clients and software or hardware-based phones connect to the PBXware server and may then make calls. PBXware maintains a database of all phones/users and their associated addresses, and it may connect internal calls or route external calls via a VoIP gateway or a VoIP service provider. A business phone system, helps businesses interact with their consumers, but with superior cloud-based technology, allowing organizations to grow.
-                                        </p>
-                                </div>
-        
-                                <div class="accordation">
-                                        <h3>How can Business Phone system save my time and money?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <ul>
-                                                <li>Firm phone systems enable business branch offices to interact effortlessly utilizing VoIP capabilities, which cuts phone costs and time while also allowing users to reach faraway coworkers via extension numbers.</li>
-                                                <li>The Business Phone System effortlessly develops conference bridges between workers on a local or remote (international) level, saving time and potential trip costs.</li>
-                                                <li>Calls may be diverted to employee mobile phones, giving them greater flexibility, mobility, and time to improve company performance. This immediately saves time and money.</li>
-                                                <li>Users may quickly walk through the settings using PBXware's browser-based system administration. As a result, it saves a lot of time and money on system maintenance, technical support, training, and other things. The use of VoIP will drastically reduce the cost of telephone communication.</li>
-                                        </ul>
-                                </div>
+                              </div>
                         </div>
                 </section>
+       <script  src="/resources/scripts/script1.js"></script>
         </section>
 
         <section id="pricing-id">
@@ -1441,7 +1596,7 @@ header nav ul li .nav-items .company-content img {
                                 <div class="text-content">
                                         <h4>Business Edition</h4>
                                         <p>
-                                                Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                 <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                         </p>
                                 </div>
@@ -1458,7 +1613,7 @@ header nav ul li .nav-items .company-content img {
                 data-aos-once="true"
                 data-aos-duration="1000">
                         <h3>
-                                Make your business stand out with your own branding added to the PBXware.
+                                Make your business stand out with your own branding added to the PBX.
                         </h3>
                         <button>See Pricing</button>
                 </div>
@@ -1575,7 +1730,7 @@ header nav ul li .nav-items .company-content img {
                                 <div class="text-content">
                                         <h4>Business Edition</h4>
                                         <p>
-                                                Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                 <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                         </p>
                                 </div>
@@ -1624,7 +1779,7 @@ header nav ul li .nav-items .company-content img {
                                 <div class="text-content">
                                         <h4>Business Edition</h4>
                                         <p>
-                                                Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                 <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                         </p>
                                 </div>

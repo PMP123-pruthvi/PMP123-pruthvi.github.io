@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bridge Ip2</title>
         <link rel="stylesheet" href="../resources/styles/product.css">
+        <link rel="stylesheet" href="/css/test.css">
         <script src="../resources/scripts/script.js" defer></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <!-- AOS -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -30,6 +32,30 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
 
         <style>
+
+header nav ul li .nav-items {
+  max-width: 800px;
+  position: absolute;
+  top: 160%;
+  left: -300px;
+  z-index: 10000;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+          box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+  padding: 20px;
+  visibility: collapse;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 
 header nav ul li .nav-items .company-content {
   width: 300px;
@@ -139,9 +165,83 @@ header nav ul li .nav-items .company-content img {
   
   margin-top: -20px;
 }
+
+/*top button */
+#button1 {
+  display: inline-block;
+  background-color: #FF8303;
+  width: 50px;
+  height: 50px;
+  
+  text-align: center;
+  border-radius:50%;
+  position: fixed;
+  bottom: 30px;
+  right: 1px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button1::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.3em;
+  line-height: 50px;
+  color: #fff;
+}
+#button1:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button1:active {
+  background-color: #555;
+}
+#button1.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+
+@media (min-width: 500px) {
+  
+  #button1 {
+    margin: 30px;
+  }
+}
+
         </style>
 </head>
 <body>
+
+        <!--top button-->
+
+      <a id="button1"></a>
+
+      <script>
+        var btn = $('#button1');
+      
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+          btn.addClass('show');
+        } else {
+          btn.removeClass('show');
+        }
+      });
+      
+      btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+      });
+      
+      </script>
+
+      
         <section class="head-section">
                 <header  id="header">
                         <!-- <div class="user-acc">
@@ -178,124 +278,126 @@ header nav ul li .nav-items .company-content img {
                                                             <div class="items-content">
                                                                     <div id="heading" class="heading">
                                                                             <h3>Bridge I2P</h3>
-                                                                            <p>
-                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                            </p>
+                                                                            <p style="font-size:13px ; color:black;">
+                                                                                Switch to a dependable VoIP unified communication solution for your business to simplify your communications and take your company to greater heights with advanced features.
+                                                                        </p>
                                                                     </div>
                                                                     <div id="links" class="links">
                                                                             <div class="link">
                                                                                     <img src="../resources/img/Products Icons/icons_Business Phone System.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="./products.html">Business Phone System</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Simplify Business Communication With A Dynamic Cloud-based VoIP PBXware Telephony Platform.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                             <div class="link">
                                                                                     <img src="../resources/img/Products Icons/icons_Contact Center.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="./contact.html">Cloud Contact Centre</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Connect And Work With Agents Using A Comprehensive And Secure Cloud Telephony Solution.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                             <div class="link">
                                                                                     <img src="../resources/img/Products Icons/icons_IVR broadcasting.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="./IVRBroadcast.html">IVR Broadcasting</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Customize An Audio Message And Incorporate It in Your Company Requirements.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                     </div>
                                                             </div>
                                                             <div id="company-content" class="company-content">
-                                                                    <p>
-                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                            Aliquam tempus nibh eros, ac consequat nisl condimentum non.
-                                                                    </p>
-                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="160px" max-width="100%" alt="">
+                                                                <p style="font-size:13px ;">
+                                                                        Are you looking for a corporate communications solution that will allow you to stay connected from any location and on any device? 
+                                                                        Bridgei2p provides all of the contemporary capabilities at a reasonable price for all business types. 
+                                                                        You can take your company to the next level in a matter of minutes.
+                                                                </p>
+                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="165px" max-width="100%" alt="">
                                                             </div>
                                                     </div>
                                             </li>
                                         <li id="solution-parent">
                                                 <a id="solutions" href="#">Solutions<ion-icon id="solution-icon" name="arrow-down-circle-outline"></ion-icon></a>
                                                 <div id="solution-items" class="nav-items">
-                                                    <div id="items-content" class="items-content">
-                                                            <div class="heading">
-                                                                    <h3>Bridge I2P</h3>
-                                                                    <p>
-                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                    </p>
-                                                            </div>
-                                                            <div class="links">
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_Professional services.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/professional-services.html">Professional Services</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_Call Center.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/call-center.html">Call Center</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_health.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/health.html">Healthcare</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_Retail.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/retail.html">Retail</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_financial .svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/financial.html">Financial Services</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../resources/img/Solutions/icons/Icons_Industrial & Distribution.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./solutions/industrial-distribution.html">Industrial/Distribution</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                            </div>
-                                                    </div>
-                                                    <div class="company-content">
-                                                            <p>
-                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                    Aliquam tempus nibh eros, ac consequat nisl condimentum non.
-                                                            </p>
-                                                            <img src="../resources/img/image-in-the-place-logo.png" alt="">
-                                                    </div>
-                                            </div>
+                                                        <div id="items-content" class="items-content">
+                                                                <div class="heading">
+                                                                        <h3>Bridgei2p</h3>
+                                                                        <p style="font-size:13px ; color:black;">
+                                                                            An all-in-one cloud solution for all your business needs. Discover advanced cloud computing services all in a single platform.
+                                                                        </p>
+                                                                </div>
+                                                                <div class="links">
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_Professional services.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/professional-services.html">Professional Services</a>
+                                                                                        <p>
+                                                                                            See why professionals need a comprehensive platform to get more done with all the communication tools.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_Call Center.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/call-center.html">Call Center</a>
+                                                                                        <p>
+                                                                                            Prioritize customers and understand their challenges using effective call campaigns.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_health.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/health.html">Healthcare</a>
+                                                                                        <p>
+                                                                                            Enable healthcare professionals to build an excellent rapport with patients, in real-time.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_Retail.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/retail.html">Retail</a>
+                                                                                        <p>
+                                                                                            One stop-shop to deliver exceptional services through a diverse array of channels.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_financial .svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/financial.html">Financial Services</a>
+                                                                                        <p>
+                                                                                            Offer a security-oriented and reliable client experience on any device.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Solutions/icons/Icons_Industrial & Distribution.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./solutions/industrial-distribution.html">Industrial/Distribution</a>
+                                                                                        <p>
+                                                                                            An all-in-one cloud powered solution that aids in maximizing service quality.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="company-content">
+                                                                <p style="font-size:13px ;">
+                                                                    By industry or business requirement, find smart solutions for your company. Bridgei2p helps you explore exceptional 
+                                                                    services that improve customer satisfaction and maximize efficiency across a wide variety of channels. 
+                                                                    You can drive guaranteed success through our cloud powered technology.
+                                                                </p>
+                                                                <img src="../resources/img/image-in-the-place-logo.png" alt="" height="400px">
+                                                        </div>
+                                                </div>
                                             </li>
                                     <li><a href="./integration.html">Integrations</a></li>
                                     <!-- <li><a href="#">Plans & Pricing</a></li> -->
@@ -390,12 +492,12 @@ header nav ul li .nav-items .company-content img {
                           <div class="swiper-slide">
                                 <div class="header-container">
                                         <div class="text-container">
-                                                <span><a href="/index.html" style="text-decoration-line:none ;" > Home</a> > <a href="/pages/products.html" style="text-decoration-line:none ;" > Products</a> > Contact Center</span>
+                                                <span><a href="/index.html" style="text-decoration-line:none ;" > Home</a> > <a href="/pages/products.html" style="text-decoration-line:none ;" > Products</a> >Cloud Contact Center</span>
                                                 <h2>The Cloud Contact Center <br> Software That Connects It All</h2>
                                                 <!-- <p style="font-size: 1.2rem; font-weight:600;">Revolutionize. Reconnect. Anywhere. Anytime.
                                                         Never Miss a Business Lead & Work Smart with VoIP.</p> -->
-                                                        <p>Communication might be difficult at times. We make it come handy for you.
-                                                                Meeting Every Possible Limit.</p>
+                                                        <p>Communication might be difficult at times. We make it come handy for you.</p>
+                                                          <p>    Meeting Every Possible Limit.</p>
                                                 <div class="btn-container">
                                                         <button><a href="/pages/contact-us.html"> Start Free Trial</a></button>
                                                         <button><a href="/pages/contact-us.html">Get Quote</a></button>
@@ -454,8 +556,8 @@ header nav ul li .nav-items .company-content img {
                                                         <!-- <h4>Business Edition</h4> -->
                                                         <p>
                                                                 A Cloud Contact Center is a facility that handles inbound and outbound customer contacts for a firm. Our cloud contact center solution is a software solution that includes a complete collection of tools and apps that allow you to give excellent customer service over several channels like as email, phone, and SMS.
-                                                                PBXware's Contact Center Edition is designed to make call handling easier and more efficient in busy call centers and contact centers of any size. Each version of Contact Center PBX supports unique features that maximize performance, reliability, and expandability, allowing you to boost workplace productivity and revolutionize the way you do business. With extensive data, reporting, and monitoring, provide your company with everything it needs to start and maintain inbound call campaigns efficiently.
-                                                                Upgrade to PBXware Contact Center and offer a consistent and high-quality experience to your clients.
+                                                                PBX Contact Center Edition is designed to make call handling easier and more efficient in busy call centers and contact centers of any size. Each version of Contact Center PBX supports unique features that maximize performance, reliability, and expandability, allowing you to boost workplace productivity and revolutionize the way you do business. With extensive data, reporting, and monitoring, provide your company with everything it needs to start and maintain inbound call campaigns efficiently.
+                                                                Upgrade to PBX Contact Center and offer a consistent and high-quality experience to your clients.
                                                         </p>
                                                 </div>
                                                 <div class="img-container">
@@ -482,7 +584,7 @@ header nav ul li .nav-items .company-content img {
                                         <!-- <div class="text-content">
                                                 <h4>Business FAQs</h4>
                                                 <p>
-                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                         <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                                 </p>
                                         </div>
@@ -496,7 +598,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Business Pricing</h4>
                                                 <p>
-                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                         <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud. <br>
                                                 </p>
                                         </div>
@@ -516,7 +618,7 @@ header nav ul li .nav-items .company-content img {
                 data-aos-once="true"
                         data-aos-duration="1000">
                                 <h3>
-                                        The Most Cutting-edge Cloud Technology with Distinct Competitive Advantages.
+                                        The Most Cutting-edge Cloud Technology with Distinct Competitive Advantages.<br>
                                          Meet Customer Demands with A Versatile Contact Center. You Can Count on Us to Deliver.
                                 </h3>
                                 <!-- <button>See Pricing</button> -->
@@ -538,7 +640,7 @@ header nav ul li .nav-items .company-content img {
                                                         <li>Adds new features on a regular basis.</li>
                                                         <li>Provides consistent performance, dependability, and availability.</li>
                                                         <li>Keeps your consumer information safe.</li>
-                                                        <li>Complies with the most important norms and regulations</li>
+                                                        <li>Complies with the most important norms and regulations.</li>
                                                         <li>Allows for on-demand scalability, allowing you to scale up as your company expands.</li>
                                                 </ul>
                                         </div>
@@ -551,7 +653,7 @@ header nav ul li .nav-items .company-content img {
                         data-aos-duration="1000">
                                 <h3>
                                         When Everything Is Integrated, Serving and Selling Is Much Easier. 
-                                        Reimagine Everything with The Aid Of Our contact Centre.
+                                        Reimagine Everything with The Aid Of Our Contact Centre.
                                 </h3>
                                 <!-- <button>See Pricing</button> -->
                         </div>
@@ -565,32 +667,39 @@ header nav ul li .nav-items .company-content img {
                         <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <div class="accordation">
-                                        <h3>What is the operation of a cloud contact center?</h3>
-                                        <ion-icon name="add" class="add-btn" ></ion-icon>
+                        <div class="accordion">
+                                <div class="accordion-item">
+                                  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What is the operation of a cloud contact center?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        A Cloud Telephony Solution is a combination of tools and apps that work together as a single hub via the internet, allowing virtual or remote contact center workers to manage all inbound and outgoing client contacts in a variety of ways. 
+                                        Communicating through calls and messages, intelligent call routing, agent management, 
+                                        and analytics are all features of the Contact Center Solution, which helps businesses solve their communication problems with their customers.
+                              </p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                A Cloud Telephony Solution is a combination of tools and apps that work together as a single hub via the internet, allowing virtual or remote contact center workers to manage all inbound and outgoing client contacts in a variety of ways. Communicating through calls and messages, intelligent call routing, agent management, and analytics are all features of the Contact Center Solution, which helps businesses solve their communication problems with their customers.
-                                        </p>
-                                </div>
-        
-                                <div class="accordation">
-                                        <h3>How does A Contact Centre Solution typically operate?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>For your Cloud Contact Center, you may leverage Bridgei2p's cloud contact center solution to connect omnichannel and deliver easy dashboards.</p>
-                                        <ul>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How does A Contact Centre Solution typically operate?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        For your Cloud Contact Center, you may leverage Bridgei2p's 
+                                        cloud contact center solution to connect omnichannel and deliver easy dashboards.
+                                </p>
+                                        <ul style="margin-top: -10px;line-height: 25px;">
                                                 <li>Cloud telephony is combining several communication channels into a single system, allowing agents to connect with clients in a variety of ways. Call routing is improved using the Contact Centre Solution.</li>
                                                 <li>Advanced and demanding Call-routing technology allows customers and clients to talk with a knowledgeable representative. You may manage agents using the Contact Center Solution.</li>
                                                 <li>Agent Management- Using digital interaction recording, quality and performance management, and other technologies, you may skillfully manage agents. Your cloud contact center may benefit from automation and analytics.</li>
                                                 <li>Automate and analyze your workflow- You may make data-driven decisions to help your company flourish by integrating business analytics and dynamic reporting. Without interruption, connect other company systems, aggregate data, give comprehensive performance perspectives, and automate operations.</li>
                                                 <li>Obtaining access to user-friendly dashboards and in-depth analytics- This enables managers to view and assess statistics such as agent idle time, client wait time, and average length to ensure that contact centres are maximized.</li>
+                                               
                                         </ul>
+                             
+                                  </div>
                                 </div>
+                              </div>
                         </div>
                 </section>
+               
         </section>
 
         <section id="features-id" class="contact-features-section" style="margin-top: 0;">
@@ -708,7 +817,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>PBX Wallboard for Contact Centers</h4>
                                                 <p>
-                                                        Contact Center PBXware Wallboards deliver real-time information to all of your agents. 
+                                                        Contact Center PBX Wallboards deliver real-time information to all of your agents. 
                                                         The data is given in an easy-to-read format that aids in the measurement of call center performance. Agents may stay updated about all call center activity while focusing on their individual work thanks to wallboards.
                                                 </p>
                                         </div>
@@ -792,7 +901,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Improve the quality of your service</h4>
                                                 <p>
-                                                        You can track call activity in real time and produce appropriate data with the PBXware Contact Center version, which will help you increase your business productivity.
+                                                        You can track call activity in real time and produce appropriate data with the PBX Contact Center version, which will help you increase your business productivity.
                                                          Different sorts of reports, such as Daily, Monthly, and Extension Reports, can be generated. Datetime Range, Caller, Trunk, Duration, and other filters can be applied to each report.
                                                 </p>
                                         </div>
@@ -834,7 +943,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Utilize your current IP phones</h4>
                                                 <p>
-                                                        Most IP phones are compatible with PBXware. Use the same extension across all of your devices. 
+                                                        Most IP phones are compatible with PBX. Use the same extension across all of your devices. 
                                                         Using technologies like Automated Provisioning, Busy Lamp Field (BLF), Hot Desking, and others, you can save time for both your IT staff and your users.      
                                                 </p>
                                         </div>
@@ -850,7 +959,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Support for headsets</h4>
                                                 <p>
-                                                        Over 100 headsets from industry renowned brands are included with PBXware Contact Center out of the box. Some headsets, such as those from Jabra and Plantronics, include additional functionality, allowing you to use the headset buttons to answer, hold, mute, or hang up a call. 
+                                                        Over 100 headsets from industry renowned brands are included with PBX Contact Center out of the box. Some headsets, such as those from Jabra and Plantronics, include additional functionality, allowing you to use the headset buttons to answer, hold, mute, or hang up a call. 
                                                         It is simple to set up and use your headsets. Your clients will be pleased, and you will be as well. 
                                                 </p>
                                         </div>
@@ -876,8 +985,8 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Use your CRM to make calls directly</h4>
                                                 <p>
-                                                        Integrate the PBXware telephony system's features and capabilities into your CRM or Web browser. 
-                                                        Salesforce, SugarCRM, MS Dynamics, Zoho, Zendesk, Bullhorn, Vtiger, Pipedrive, SuiteCRM, Hubspot, and many other major business programmes are all integrated with PBXware Business.
+                                                        Integrate the PBX telephony system's features and capabilities into your CRM or Web browser. 
+                                                        Salesforce, SugarCRM, MS Dynamics, Zoho, Zendesk, Bullhorn, Vtiger, Pipedrive, SuiteCRM, Hubspot, and many other major business programmes are all integrated with PBX Business.
                                                 </p>
                                                 <span>Know more about <a href="./integration.html">CRM</a> and its importance</span>
                                         </div>
@@ -893,7 +1002,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Online self-care</h4>
                                                 <p>
-                                                        PBXware's online self-care site may help you save money on support while also improving your customers' experience. 
+                                                        PBX online self-care site may help you save money on support while also improving your customers' experience. 
                                                         Users may access their own dashboard and reports, check their voicemails, and adjust Enhanced Services like Caller ID, Do Not Disturb, and Call Forwarding, among other things, using the online self-care site.
                                                 </p>
                                         </div>
@@ -919,7 +1028,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Comprehensive Role Based Management</h4>
                                                 <p>
-                                                        To outsource the management of PBXware, system administrators can create groups and users with different rights. Administrators, Site Admins, Operators, Managers, and Other Custom Groups are the different types of users.
+                                                        To outsource the management of PBX, system administrators can create groups and users with different rights. Administrators, Site Admins, Operators, Managers, and Other Custom Groups are the different types of users.
                                                 </p>
                                         </div>
                                 </div>
@@ -928,14 +1037,14 @@ header nav ul li .nav-items .company-content img {
 
                 <section class="linked-section">
                         <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  
-                data-aos-once="true"
+                        data-aos-once="true"
                         data-aos-duration="1000">
-                                <h3>
+                                <h3 style="font-size: clamp(1.3rem, 4vw, 1.8rem); max-width: 1000px; ">
                                         To learn more, schedule a free consultation with one of our VoIP experts.
                                 </h3>
-                                <a href="./contact-us.html">Schedule a Call</a>
+                                <a href="/pages/contact-us.html#request-demo">Schedule a Call</a>
                         </div>
-                </section>
+                </section> 
 
                 <section class="faq-section">
                         <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
@@ -946,32 +1055,39 @@ header nav ul li .nav-items .company-content img {
                         <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <div class="accordation">
-                                        <h3>What is the operation of a cloud contact center?</h3>
-                                        <ion-icon name="add" class="add-btn" ></ion-icon>
+                        <div class="accordion">
+                                <div class="accordion-item">
+                                  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What is the operation of a cloud contact center?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        A Cloud Telephony Solution is a combination of tools and apps that work together as a single hub via the internet, allowing virtual or remote contact center workers to manage all inbound and outgoing client contacts in a variety of ways. 
+                                        Communicating through calls and messages, intelligent call routing, agent management, 
+                                        and analytics are all features of the Contact Center Solution, which helps businesses solve their communication problems with their customers.
+                              </p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                A Cloud Telephony Solution is a combination of tools and apps that work together as a single hub via the internet, allowing virtual or remote contact center workers to manage all inbound and outgoing client contacts in a variety of ways. Communicating through calls and messages, intelligent call routing, agent management, and analytics are all features of the Contact Center Solution, which helps businesses solve their communication problems with their customers.
-                                        </p>
-                                </div>
-
-                                <div class="accordation">
-                                        <h3>How does A Contact Centre Solution typically operate?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>For your Cloud Contact Center, you may leverage Bridgei2p's cloud contact center solution to connect omnichannel and deliver easy dashboards.</p>
-                                        <ul>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How does A Contact Centre Solution typically operate?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        For your Cloud Contact Center, you may leverage Bridgei2p's 
+                                        cloud contact center solution to connect omnichannel and deliver easy dashboards.
+                                </p>
+                                        <ul style="margin-top: -10px;line-height: 25px;">
                                                 <li>Cloud telephony is combining several communication channels into a single system, allowing agents to connect with clients in a variety of ways. Call routing is improved using the Contact Centre Solution.</li>
                                                 <li>Advanced and demanding Call-routing technology allows customers and clients to talk with a knowledgeable representative. You may manage agents using the Contact Center Solution.</li>
                                                 <li>Agent Management- Using digital interaction recording, quality and performance management, and other technologies, you may skillfully manage agents. Your cloud contact center may benefit from automation and analytics.</li>
                                                 <li>Automate and analyze your workflow- You may make data-driven decisions to help your company flourish by integrating business analytics and dynamic reporting. Without interruption, connect other company systems, aggregate data, give comprehensive performance perspectives, and automate operations.</li>
                                                 <li>Obtaining access to user-friendly dashboards and in-depth analytics- This enables managers to view and assess statistics such as agent idle time, client wait time, and average length to ensure that contact centres are maximized.</li>
+                                               
                                         </ul>
+                             
+                                  </div>
                                 </div>
+                              </div>
                         </div>
                 </section>
+              
         </section>
 
         <section id="benefits-id">
@@ -985,7 +1101,7 @@ header nav ul li .nav-items .company-content img {
                                 <div class="text-content">
                                         <h3>REASONS WHY BUSINESSES NEED CLOUD CONTACT CENTRE SOLUTIONS </h3>
                                         <!-- <p>
-                                                PBXware's Business Edition is a complete and fully configurable VoIP solution that provides you with a full range of corporate phone system features and capabilities. Each edition of Business PBX supports unique features that maximize performance, reliability, and expandability, allowing you to revolutionize the way you do business and boost workplace productivity.
+                                                PBX Business Edition is a complete and fully configurable VoIP solution that provides you with a full range of corporate phone system features and capabilities. Each edition of Business PBX supports unique features that maximize performance, reliability, and expandability, allowing you to revolutionize the way you do business and boost workplace productivity.
                                                 With unique deployment choices ranging from on-premise softswitch deployments based on customized units and custom hardware to Hosted PBX systems serviced via SERVERware in the Cloud, it offers greater flexibility and customization potential, giving you more control over the end result.        
                                         </p> -->
                                 </div>
@@ -1006,7 +1122,7 @@ header nav ul li .nav-items .company-content img {
                                                 <h4>Custom Development </h4>
                                                 <p>
                                                         Because no two businesses are alike, we tailor our software to meet the unique requirements of each customer. 
-                                                        If a feature that your organization demands is not already available in the current version of PBXware, our team of highly skilled developers will create and implement it as quickly as possible.     
+                                                        If a feature that your organization demands is not already available in the current version of PBX, our team of highly skilled developers will create and implement it as quickly as possible.     
                                                 </p>
                                         </div>
                                 </div>
@@ -1087,7 +1203,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>A multilingual graphical user interface</h4>
                                                 <p>
-                                                        Spanish and French versions of PBXware are available. Our long-time Spanish and French users will now be able to utilize PBXware in their native tongue.       
+                                                        Spanish and French versions of PBX are available. Our long-time Spanish and French users will now be able to utilize PBX in their native tongue.       
                                                 </p>
                                         </div>
                                 </div>
@@ -1168,7 +1284,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Back up your files to the cloud</h4>
                                                 <p>
-                                                        Amazon S3, Google Drive, Dropbox, and FTP are all supported by PBXware. You may automatically save voicemail, fax, and call data records and store them in a secure location.
+                                                        Amazon S3, Google Drive, Dropbox, and FTP are all supported by PBX. You may automatically save voicemail, fax, and call data records and store them in a secure location.
                                                 </p>
                                         </div>
                                 </div>
@@ -1183,7 +1299,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Effortless speech-to-text-conversion</h4>
                                                 <p>
-                                                        Google Cloud Speech-to-Text and IBM Watson are both integrated with PBXware's voicemail system (STT). Transcripts of your voicemail messages will be forwarded to your email address.
+                                                        Google Cloud Speech-to-Text and IBM Watson are both integrated with PBX voicemail system (STT). Transcripts of your voicemail messages will be forwarded to your email address.
                                                 </p>
                                         </div>
                                         <div class="img-container">
@@ -1208,7 +1324,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Branding</h4>
                                                 <p>
-                                                        With your own logo applied to PBXware, you can make your company stand out. Our in-house experts will use your logo and corporate colors to design a full solution that will help you take your business to the next level. 
+                                                        With your own logo applied to PBX, you can make your company stand out. Our in-house experts will use your logo and corporate colors to design a full solution that will help you take your business to the next level. 
                                                 </p>
                                         </div>
                                 </div>
@@ -1223,7 +1339,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>CallerID Look Up</h4>
                                                 <p>
-                                                        Integrating PBXware with an external lookup service reduces fraud, increases lead conversions, and improves message delivery. Even if it's their first time dialing in, provide a client or business a personalized experience.
+                                                        Integrating PBX with an external lookup service reduces fraud, increases lead conversions, and improves message delivery. Even if it's their first time dialing in, provide a client or business a personalized experience.
                                                 </p>
                                         </div>
                                         <div class="img-container">
@@ -1249,7 +1365,7 @@ header nav ul li .nav-items .company-content img {
                                                 <h4>Secure voice</h4>
                                                 <p>
                                                         TLS (Transport Layer Security) and SRTP (Secure Real-time Transport Protocol) protocols are used to encrypt your conversations in the 
-                                                        PBXware Call Center version. PBXware now supports Let's Encrypt SSL certificates, which adds another degree of protection.
+                                                        PBX Call Center version. PBX now supports Let's Encrypt SSL certificates, which adds another degree of protection.
                                                 </p>
                                         </div>
                                 </div>
@@ -1290,7 +1406,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>API</h4>
                                                 <p>
-                                                        Using PBXware's easy, powerful, and secure application programming interface, you may connect your apps to PBXware (API). The HTTP protocol may be used to access Extensions, Trunks, DIDs, Ring Groups, IVRs, and more.						
+                                                        Using PBX easy, powerful, and secure application programming interface, you may connect your apps to PBX (API). The HTTP protocol may be used to access Extensions, Trunks, DIDs, Ring Groups, IVRs, and more.						
                                                 </p>
                                         </div>
                                 </div>
@@ -1319,14 +1435,14 @@ header nav ul li .nav-items .company-content img {
 
                 <section class="linked-section">
                         <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  
-                data-aos-once="true"
+                        data-aos-once="true"
                         data-aos-duration="1000">
-                                <h3>
+                                <h3 style="font-size: clamp(1.3rem, 4vw, 1.8rem); max-width: 1000px; ">
                                         To learn more, schedule a free consultation with one of our VoIP experts.
                                 </h3>
-                                <a href="./contact-us.html">Schedule a Call</a>
+                                <a href="/pages/contact-us.html#request-demo">Schedule a Call</a>
                         </div>
-                </section>
+                </section> 
 
                 <section class="faq-section">
                         <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
@@ -1337,32 +1453,39 @@ header nav ul li .nav-items .company-content img {
                         <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                         data-aos-duration="1000">
-                                <div class="accordation">
-                                        <h3>What is the operation of a cloud contact center?</h3>
-                                        <ion-icon name="add" class="add-btn" ></ion-icon>
+                        <div class="accordion">
+                                <div class="accordion-item">
+                                  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What is the operation of a cloud contact center?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        A Cloud Telephony Solution is a combination of tools and apps that work together as a single hub via the internet, allowing virtual or remote contact center workers to manage all inbound and outgoing client contacts in a variety of ways. 
+                                        Communicating through calls and messages, intelligent call routing, agent management, 
+                                        and analytics are all features of the Contact Center Solution, which helps businesses solve their communication problems with their customers.
+                              </p>
+                                  </div>
                                 </div>
-                                <div class="answer">
-                                        <p>
-                                                A Cloud Telephony Solution is a combination of tools and apps that work together as a single hub via the internet, allowing virtual or remote contact center workers to manage all inbound and outgoing client contacts in a variety of ways. Communicating through calls and messages, intelligent call routing, agent management, and analytics are all features of the Contact Center Solution, which helps businesses solve their communication problems with their customers.
-                                        </p>
-                                </div>
-
-                                <div class="accordation">
-                                        <h3>How does A Contact Centre Solution typically operate?</h3>
-                                        <ion-icon name="add"  class="add-btn" ></ion-icon>
-                                </div>
-                                <div class="answer">
-                                        <p>For your Cloud Contact Center, you may leverage Bridgei2p's cloud contact center solution to connect omnichannel and deliver easy dashboards.</p>
-                                        <ul>
+                                <div class="accordion-item">
+                                  <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How does A Contact Centre Solution typically operate?</span><span class="icon" aria-hidden="true"></span></button>
+                                  <div class="accordion-content">
+                                    <p>
+                                        For your Cloud Contact Center, you may leverage Bridgei2p's 
+                                        cloud contact center solution to connect omnichannel and deliver easy dashboards.
+                                </p>
+                                        <ul style="margin-top: -10px;line-height: 25px;">
                                                 <li>Cloud telephony is combining several communication channels into a single system, allowing agents to connect with clients in a variety of ways. Call routing is improved using the Contact Centre Solution.</li>
                                                 <li>Advanced and demanding Call-routing technology allows customers and clients to talk with a knowledgeable representative. You may manage agents using the Contact Center Solution.</li>
                                                 <li>Agent Management- Using digital interaction recording, quality and performance management, and other technologies, you may skillfully manage agents. Your cloud contact center may benefit from automation and analytics.</li>
                                                 <li>Automate and analyze your workflow- You may make data-driven decisions to help your company flourish by integrating business analytics and dynamic reporting. Without interruption, connect other company systems, aggregate data, give comprehensive performance perspectives, and automate operations.</li>
                                                 <li>Obtaining access to user-friendly dashboards and in-depth analytics- This enables managers to view and assess statistics such as agent idle time, client wait time, and average length to ensure that contact centres are maximized.</li>
+                                               
                                         </ul>
+                             
+                                  </div>
                                 </div>
+                              </div>
                         </div>
                 </section>
+                <script  src="/resources/scripts/script1.js"></script>
         </section>
 
         <section id="pricing-id">
@@ -1391,7 +1514,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Business Edition</h4>
                                                 <p>
-                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                         <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                                 </p>
                                         </div>
@@ -1405,7 +1528,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Business Features</h4>
                                                 <p>
-                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                         <br><br>
                                                 </p>
                                         </div>
@@ -1419,7 +1542,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Business FAQs</h4>
                                                 <p>
-                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                         <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                                 </p>
                                         </div>
@@ -1433,7 +1556,7 @@ header nav ul li .nav-items .company-content img {
                                         <div class="text-content">
                                                 <h4>Business Pricing</h4>
                                                 <p>
-                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                         <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud. <br>
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minima, ducimus aliquid esse quas molestias quos veritatis aperiam accusamus saepe nemo minus repellendus repellat, dolores impedit perferendis excepturi fugiat ea.
                                                 </p>
@@ -1484,7 +1607,7 @@ header nav ul li .nav-items .company-content img {
                                 <div class="text-content">
                                         <h4>Business Edition</h4>
                                         <p>
-                                                Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                 <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                         </p>
                                 </div>
@@ -1501,7 +1624,7 @@ header nav ul li .nav-items .company-content img {
                 data-aos-once="true"
                 data-aos-duration="1000">
                         <h3>
-                                Make your business stand out with your own branding added to the PBXware.
+                                Make your business stand out with your own branding added to the PBX.
                         </h3>
                         <button>See Pricing</button>
                 </div>
@@ -1519,7 +1642,7 @@ header nav ul li .nav-items .company-content img {
                         <div class="text-content">
                                 <h3>Business Edition</h3>
                                 <p>
-                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                        Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                 </p>
                                 <button>View More</button>
                         </div>
@@ -1637,7 +1760,7 @@ header nav ul li .nav-items .company-content img {
                                 <div class="text-content">
                                         <h4>Business Edition</h4>
                                         <p>
-                                                Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                 <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                         </p>
                                 </div>
@@ -1686,7 +1809,7 @@ header nav ul li .nav-items .company-content img {
                                 <div class="text-content">
                                         <h4>Business Edition</h4>
                                         <p>
-                                                Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                Business Edition of PBX is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
                                                 <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
                                         </p>
                                 </div>

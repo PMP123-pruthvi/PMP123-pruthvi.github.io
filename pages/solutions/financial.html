@@ -7,6 +7,7 @@
         <title>Bridge Ip2</title>
         <link rel="stylesheet" href="../../resources/styles/solution.css">
         <script src="../../resources/scripts/script.js" defer></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <!-- AOS -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -30,6 +31,29 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
 
         <style>
+header nav ul li .nav-items {
+  max-width: 800px;
+  position: absolute;
+  top: 160%;
+  left: -300px;
+  z-index: 10000;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+          box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+  padding: 20px;
+  visibility: collapse;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
                 header nav ul li .nav-items .company-content {
   width: 300px;
   margin: 0 15px;
@@ -124,9 +148,83 @@ header nav ul li .nav-items .company-content img {
   padding: 0px 0;
   overflow-x: visible;
 }
+
+/*top button */
+#button1 {
+  display: inline-block;
+  background-color: #FF8303;
+  width: 50px;
+  height: 50px;
+  
+  text-align: center;
+  border-radius:50%;
+  position: fixed;
+  bottom: 30px;
+  right: 1px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button1::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.3em;
+  line-height: 50px;
+  color: #fff;
+}
+#button1:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button1:active {
+  background-color: #555;
+}
+#button1.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+
+@media (min-width: 500px) {
+  
+  #button1 {
+    margin: 30px;
+  }
+}
+
         </style>
 </head>
 <body>
+
+         
+ <!--top button-->
+
+      <a id="button1"></a>
+
+      <script>
+        var btn = $('#button1');
+      
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+          btn.addClass('show');
+        } else {
+          btn.removeClass('show');
+        }
+      });
+      
+      btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+      });
+      
+      </script>
+      
         <section class="head-section">
                 <header  id="header">
                         <!-- <div class="user-acc">
@@ -163,124 +261,126 @@ header nav ul li .nav-items .company-content img {
                                                             <div class="items-content">
                                                                     <div id="heading" class="heading">
                                                                             <h3>Bridge I2P</h3>
-                                                                            <p>
-                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                            </p>
+                                                                            <p style="font-size:13px ; color:black;">
+                                                                                Switch to a dependable VoIP unified communication solution for your business to simplify your communications and take your company to greater heights with advanced features.
+                                                                        </p>
                                                                     </div>
                                                                     <div id="links" class="links">
                                                                             <div class="link">
                                                                                     <img src="../../resources/img/Products Icons/icons_Business Phone System.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="../products.html">Business Phone System</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Simplify Business Communication With A Dynamic Cloud-based VoIP PBXware Telephony Platform.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                             <div class="link">
                                                                                     <img src="../../resources/img/Products Icons/icons_Contact Center.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="../contact.html">Cloud Contact Centre</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Connect And Work With Agents Using A Comprehensive And Secure Cloud Telephony Solution.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                             <div class="link">
                                                                                     <img src="../../resources/img/Products Icons/icons_IVR broadcasting.svg" alt="">
                                                                                     <div class="text-content">
                                                                                             <a href="../IVRBroadcast.html">IVR Broadcasting</a>
-                                                                                            <p>
-                                                                                                    All the power of the enterprise phone, Now in your pocket
-                                                                                            </p>
+                                                                                            <p style="font-size:11px ;">
+                                                                                                Customize An Audio Message And Incorporate It in Your Company Requirements.
+                                                                                        </p>
                                                                                     </div>
                                                                             </div>
                                                                     </div>
                                                             </div>
                                                             <div id="company-content" class="company-content">
-                                                                    <p>
-                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                            Aliquam tempus nibh eros, ac consequat nisl condimentum non.
-                                                                    </p>
-                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="160px" max-width="100%" alt="">
+                                                                <p style="font-size:13px ;">
+                                                                        Are you looking for a corporate communications solution that will allow you to stay connected from any location and on any device? 
+                                                                        Bridgei2p provides all of the contemporary capabilities at a reasonable price for all business types. 
+                                                                        You can take your company to the next level in a matter of minutes.
+                                                                </p>
+                                                                    <img src="/resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="165px" max-width="100%" alt="">
                                                             </div>
                                                     </div>
                                             </li>
                                         <li id="solution-parent">
                                                 <a id="solutions" href="#">Solutions<ion-icon  onclick="solutionMenu"  name="arrow-down-circle-outline"></ion-icon></a>
                                                 <div id="solution-items" class="nav-items">
-                                                    <div id="items-content" class="items-content">
-                                                            <div class="heading">
-                                                                    <h3>Bridge I2P</h3>
-                                                                    <p>
-                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                    </p>
-                                                            </div>
-                                                            <div class="links">
-                                                                    <div class="link">
-                                                                            <img src="../../resources/img/Solutions/icons/Icons_Professional services.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./professional-services.html">Professional Services</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../../resources/img/Solutions/icons/Icons_Call Center.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./call-center.html">Call Center</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../../resources/img/Solutions/icons/Icons_health.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./health.html">Healthcare</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../../resources/img/Solutions/icons/Icons_Retail.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./retail.html">Retail</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../../resources/img/Solutions/icons/Icons_financial .svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./financial.html">Financial Services</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="link">
-                                                                            <img src="../../resources/img/Solutions/icons/Icons_Industrial & Distribution.svg" alt="">
-                                                                            <div class="text-content">
-                                                                                    <a href="./industrial-distribution.html">Industrial/Distribution</a>
-                                                                                    <p>
-                                                                                            All the power of the enterprise phone, Now in your pocket
-                                                                                    </p>
-                                                                            </div>
-                                                                    </div>
-                                                            </div>
-                                                    </div>
-                                                    <div class="company-content">
-                                                            <p>
-                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                    Aliquam tempus nibh eros, ac consequat nisl condimentum non.
-                                                            </p>
-                                                            <img src="../../resources/img/image-in-the-place-logo.png" alt="">
-                                                    </div>
-                                            </div>
+                                                        <div id="items-content" class="items-content">
+                                                                <div class="heading">
+                                                                        <h3>Bridgei2p</h3>
+                                                                        <p style="font-size:13px ; color:black;">
+                                                                            An all-in-one cloud solution for all your business needs. Discover advanced cloud computing services all in a single platform.
+                                                                        </p>
+                                                                </div>
+                                                                <div class="links">
+                                                                        <div class="link">
+                                                                                <img src="../../resources/img/Solutions/icons/Icons_Professional services.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./professional-services.html">Professional Services</a>
+                                                                                        <p>
+                                                                                            See why professionals need a comprehensive platform to get more done with all the communication tools.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../../resources/img/Solutions/icons/Icons_Call Center.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./call-center.html">Call Center</a>
+                                                                                        <p>
+                                                                                            Prioritize customers and understand their challenges using effective call campaigns.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../../resources/img/Solutions/icons/Icons_health.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./health.html">Healthcare</a>
+                                                                                        <p>
+                                                                                            Enable healthcare professionals to build an excellent rapport with patients, in real-time.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../../resources/img/Solutions/icons/Icons_Retail.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./retail.html">Retail</a>
+                                                                                        <p>
+                                                                                            One stop-shop to deliver exceptional services through a diverse array of channels.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../../resources/img/Solutions/icons/Icons_financial .svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./financial.html">Financial Services</a>
+                                                                                        <p>
+                                                                                            Offer a security-oriented and reliable client experience on any device.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../../resources/img/Solutions/icons/Icons_Industrial & Distribution.svg" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./industrial-distribution.html">Industrial/Distribution</a>
+                                                                                        <p>
+                                                                                            An all-in-one cloud powered solution that aids in maximizing service quality.
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="company-content">
+                                                                <p style="font-size:13px ;">
+                                                                    By industry or business requirement, find smart solutions for your company. Bridgei2p helps you explore exceptional 
+                                                                    services that improve customer satisfaction and maximize efficiency across a wide variety of channels. 
+                                                                    You can drive guaranteed success through our cloud powered technology.
+                                                                </p>
+                                                                <img src="../../resources/img/image-in-the-place-logo.png" alt="" height="400px">
+                                                        </div>
+                                                </div>
                                             </li>
                                     <li><a href="../integration.html">Integrations</a></li>
                                     <!-- <li><a href="#">Plans & Pricing</a></li> -->
@@ -379,7 +479,7 @@ header nav ul li .nav-items .company-content img {
                           <div class="swiper-slide">
                                 <div class="header-container">
                                         <div class="text-container">
-                                                <span><a href="/index.html" style="text-decoration-line:none ;" > Home</a> > <a href="/pages/solutions/professional-services.html" style="text-decoration-line:none ;" > Solutions</a> > Financial</span>
+                                                <span><a href="/index.html" style="text-decoration-line:none ;" > Home</a> > <a href="/pages/solutions/professional-services.html" style="text-decoration-line:none ;" > Solutions</a> > Financial Services</span>
                                                 <h2>Communication Solutions for <br> Financial Services Sector  </h2>
                                                 <p>Believe in a top-class customer experience by securely collaborating with them and networking across departments from any location, all through a single communications platform.</p>
                                                 <div class="btn-container">
@@ -530,10 +630,9 @@ header nav ul li .nav-items .company-content img {
                                         <li>Use two-factor verification to confirm each customer's identity for privacy assurance, and use encrypted live video consultations to provide advice to consumers.</li>
                                         <li>Maintain context and consistency across channels with appealing dialogues, resulting in a better overall experience.</li>
                                         <li>Every customer encounter should include authentication, automatic notifications, voice, video, and customer analytics.</li>
+                                        <li> Talk to clients across social chat applications and SMS, allowing you to engage with them on their chosen channel.</li>
                                 </ul>
-                                <p  style="text-align: left; margin-left: 20px;">
-                                        Talk to clients across social chat applications and SMS, allowing you to engage with them on their chosen channel.
-                                </p>
+                                
                                 <br>
                         </div>
                 </div>
@@ -546,7 +645,7 @@ header nav ul li .nav-items .company-content img {
                         <h3 style="font-size: clamp(1.3rem, 4vw, 1.8rem); max-width: 1000px; ">
                                 Partner with us and we’ll help you develop a personalized solution and discuss specific telecommunications alternatives with you.
                         </h3>
-                        <a href="/pages/contact-us.html#request-demo">Request a demo</a>
+                        <a href="/pages/demo.html">Request a demo</a>
                 </div>
         </section>   
 
@@ -578,10 +677,9 @@ header nav ul li .nav-items .company-content img {
                 </div>
                 <div class="text-content">
                         <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Autem ut vel eum sed eaque dicta accusamus nobis, exercitationem officia accusantium impedit praesentium unde minus aliquid, facilis voluptatibus. Eius, nihil itaque?
+                                Know for yourself! Here's what other Bridgei2p Services customers have to say!
                         </p>
-                        <a href="/index.html#comments">See all customer stories</a>
+                        <a href="/index.html#comments">See customer stories</a>
                 </div>
                 <!-- <button>View More</button> -->
         </section>

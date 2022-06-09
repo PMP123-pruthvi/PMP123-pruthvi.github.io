@@ -9,6 +9,7 @@
         
         <link rel="stylesheet" href="./resources/styles/style.css">
         <script src="./resources/scripts/script.js" defer></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <!-- Ioniconic -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -34,6 +35,28 @@
         
         
         <style>
+                header nav ul li .nav-items {
+  max-width: 800px;
+  position: absolute;
+  top: 160%;
+  left: -300px;
+  z-index: 10000;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+          box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+  padding: 20px;
+  visibility: collapse;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
 header nav ul li .nav-items .company-content {
   width: 300px;
   margin: 0 15px;
@@ -45,6 +68,7 @@ header nav ul li .nav-items .company-content p {
 
 header nav ul li .nav-items .company-content img {
   width: 100%;
+  
   margin-top: 20px;
 }
 
@@ -232,6 +256,69 @@ header nav ul li .nav-items .company-content img {
   background-color: rgba(255, 131, 3, 0.8);
 }
 
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/*top button */
+#button1 {
+  display: inline-block;
+  background-color: #FF8303;
+  width: 50px;
+  height: 50px;
+  
+  text-align: center;
+  border-radius:50%;
+  position: fixed;
+  bottom: 30px;
+  right: 1px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button1::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.3em;
+  line-height: 50px;
+  color: #fff;
+}
+#button1:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button1:active {
+  background-color: #555;
+}
+#button1.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+
+@media (min-width: 500px) {
+  
+  #button1 {
+    margin: 30px;
+  }
+}
 
 
         </style>
@@ -239,6 +326,28 @@ header nav ul li .nav-items .company-content img {
        
 </head>
 <body>
+
+      <!--top button-->
+
+      <a id="button1"></a>
+
+<script>
+  var btn = $('#button1');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+</script>
        
         <section class="head-section">
                 <header id="header">
@@ -275,9 +384,9 @@ header nav ul li .nav-items .company-content img {
                                                 <div id="product-items" class="nav-items ">
                                                         <div class="items-content ">
                                                                 <div id="heading" class="heading ">
-                                                                        <h3>Bridge I2P</h3>
-                                                                        <p>
-                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        <h3>Bridgei2p</h3>
+                                                                        <p style="font-size:13px ; color:black;">
+                                                                                Switch to a dependable VoIP unified communication solution for your business to simplify your communications and take your company to greater heights with advanced features.
                                                                         </p>
                                                                 </div>
                                                                 <div id="links" class="links">
@@ -285,8 +394,8 @@ header nav ul li .nav-items .company-content img {
                                                                                 <img src="./resources/img/Products Icons/icons_Business Phone System.svg" alt="">
                                                                                 <div class="text-content">
                                                                                         <a href="./pages/products.html">Business Phone System</a>
-                                                                                        <p>
-                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        <p style="font-size:11px ;">
+                                                                                                Simplify Business Communication With A Dynamic Cloud-based VoIP PBXware Telephony Platform.
                                                                                         </p>
                                                                                 </div>
                                                                         </div>
@@ -294,8 +403,8 @@ header nav ul li .nav-items .company-content img {
                                                                                 <img src="./resources/img/Products Icons/icons_Contact Center.svg" alt="">
                                                                                 <div class="text-content">
                                                                                         <a href="./pages/contact.html">Cloud Contact Center</a>
-                                                                                        <p>
-                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        <p style="font-size:11px ;">
+                                                                                                Connect And Work With Agents Using A Comprehensive And Secure Cloud Telephony Solution.
                                                                                         </p>
                                                                                 </div>
                                                                         </div>
@@ -303,19 +412,20 @@ header nav ul li .nav-items .company-content img {
                                                                                 <img src="./resources/img/Products Icons/icons_IVR broadcasting.svg" alt="">
                                                                                 <div class="text-content">
                                                                                         <a href="./pages/IVRBroadcast.html">IVR Broadcasting</a>
-                                                                                        <p>
-                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        <p style="font-size:11px ;">
+                                                                                                Customize An Audio Message And Incorporate It in Your Company Requirements.
                                                                                         </p>
                                                                                 </div>
                                                                         </div>
                                                                 </div>
                                                         </div>
                                                         <div id="company-content" class="company-content">
-                                                                <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                        Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                                <p style="font-size:13px ;">
+                                                                        Are you looking for a corporate communications solution that will allow you to stay connected from any location and on any device? 
+                                                                        Bridgei2p provides all of the contemporary capabilities at a reasonable price for all business types. 
+                                                                        You can take your company to the next level in a matter of minutes.
                                                                 </p>
-                                                                <img src="./resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="160px" max-width="100%" alt="">
+                                                                <img src="./resources/img/WhatsApp Image 2022-05-23 at 10.34.42 PM.jpeg" height="175px" max-width="100%" alt="">
                                                         </div>
                                                 </div>
                                         </li>
@@ -326,9 +436,9 @@ header nav ul li .nav-items .company-content img {
                                             <div id="solution-items" class="nav-items">
                                                 <div id="items-content" class="items-content">
                                                         <div class="heading">
-                                                                <h3>Bridge I2P</h3>
-                                                                <p>
-                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                <h3>Bridgei2p</h3>
+                                                                <p style="font-size:13px ; color:black;">
+                                                                        An all-in-one cloud solution for all your business needs. Discover advanced cloud computing services all in a single platform.
                                                                 </p>
                                                         </div>
                                                         <div class="links">
@@ -337,7 +447,7 @@ header nav ul li .nav-items .company-content img {
                                                                         <div class="text-content">
                                                                                 <a href="./pages/solutions/professional-services.html">Professional Services</a>
                                                                                 <p>
-                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                        See why professionals need a comprehensive platform to get more done with all the communication tools.
                                                                                 </p>
                                                                         </div>
                                                                 </div>
@@ -346,7 +456,7 @@ header nav ul li .nav-items .company-content img {
                                                                         <div class="text-content">
                                                                                 <a href="./pages/solutions/call-center.html">Call Center</a>
                                                                                 <p>
-                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                        Prioritize customers and understand their challenges using effective call campaigns.
                                                                                 </p>
                                                                         </div>
                                                                 </div>
@@ -355,7 +465,7 @@ header nav ul li .nav-items .company-content img {
                                                                         <div class="text-content">
                                                                                 <a href="./pages/solutions/health.html">Healthcare </a>
                                                                                 <p>
-                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                        Enable healthcare professionals to build an excellent rapport with patients, in real-time.
                                                                                 </p>
                                                                         </div>
                                                                 </div>
@@ -364,7 +474,7 @@ header nav ul li .nav-items .company-content img {
                                                                         <div class="text-content">
                                                                                 <a href="./pages/solutions/retail.html">Retail</a>
                                                                                 <p>
-                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                        One stop-shop to deliver exceptional services through a diverse array of channels.
                                                                                 </p>
                                                                         </div>
                                                                 </div>
@@ -373,7 +483,7 @@ header nav ul li .nav-items .company-content img {
                                                                         <div class="text-content">
                                                                                 <a href="./pages/solutions/financial.html">Financial Services</a>
                                                                                 <p>
-                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                        Offer a security-oriented and reliable client experience on any device.
                                                                                 </p>
                                                                         </div>
                                                                 </div>
@@ -382,18 +492,18 @@ header nav ul li .nav-items .company-content img {
                                                                         <div class="text-content">
                                                                                 <a href="./pages/solutions/industrial-distribution.html">Industrial/Distribution</a>
                                                                                 <p>
-                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                        An all-in-one cloud powered solution that aids in maximizing service quality.
                                                                                 </p>
                                                                         </div>
                                                                 </div>
                                                         </div>
                                                 </div>
                                                 <div class="company-content">
-                                                        <p>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
-                                                                Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                        <p style="font-size:13px ;">
+                                                                By industry or business requirement, find smart solutions for your company. Bridgei2p helps you explore exceptional services that improve customer satisfaction and maximize efficiency across a wide variety of channels. 
+                                                                You can drive guaranteed success through our cloud powered technology.
                                                         </p>
-                                                        <img src="./resources/img/image-in-the-place-logo.png" alt="">
+                                                        <img src="./resources/img/image-in-the-place-logo.png" alt="" height="400px">
                                                 </div>
                                         </div>
                                         </li>
@@ -494,7 +604,7 @@ header nav ul li .nav-items .company-content img {
                 </header>
                 <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
+                          <div class="swiper-slide" >
                                 <div class="header-container">
                                         <div class="text-container">
                                                 <h2>VoIP Phone Solution</h2>
@@ -508,13 +618,13 @@ header nav ul li .nav-items .company-content img {
                                         data-aos-easing="linear"  
                                         data-aos-once="true"
                                         data-aos-duration="500">
-                                                <img src="./resources/img/01.png" alt="">
+                                                <img  src="./resources/img/01.png" alt="">
                                                 <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div>
                                         </div>
                                 </div>
                           </div>
-                          <div class="swiper-slide">
+                          <div class="swiper-slide" >
                                 <div class="header-container">
                                         <div class="text-container">
                                                 <h2>VoIP Solution For <br> Enterprise</h2>
@@ -531,7 +641,7 @@ header nav ul li .nav-items .company-content img {
                                         </div>
                                 </div>
                           </div>
-                          <div class="swiper-slide">
+                          <div class="swiper-slide" >
                                 <div class="header-container">
                                         <div class="text-container">
                                                 <h2>VoIP Solution For <br>Call Centers</h2>
@@ -549,9 +659,16 @@ header nav ul li .nav-items .company-content img {
                                 </div>
                           </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                       
+                                <div class="swiper-pagination "style="text-align:center">
+                                 
+                                      </div>
+                        </div>
+                               
+                       
                       </div>
         </section>
+       
         <section class="market-section">
                 <div class="section-heading" data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true" 
@@ -928,7 +1045,7 @@ header nav ul li .nav-items .company-content img {
                                 <h2 style="max-width:max-content; ">Upgrade to Smart Communication Solutions Now!</h2>
                                
                         </div>
-                        <a href= "/pages/contact-us.html#request-demo" style="float: right;">Schedule A Demo</a>
+                        <a href= "./pages/demo.html" style="float: right;">Schedule A Demo</a>
                 </div>
                
         </section>
